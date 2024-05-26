@@ -2,7 +2,7 @@ import React from "react";
 
 function RadioInput({ name, formik, radioOptions, label }) {
   return (
-    <div className=" gap-x-2 grid grid-cols-1 grid-rows-2 ">
+    <div className=" gap-x-2 grid grid-cols-1 grid-rows-2 mt-2 ">
       {/* ---------label section------------- */}
       <span className="flex ">
         <label htmlFor={name} className="mb-1 ml-2 mr-2 text-[0.65rem]">
@@ -24,7 +24,7 @@ function RadioInput({ name, formik, radioOptions, label }) {
               name={name}
               value={item.value}
               onChange={formik.handleChange}
-              checked={formik.values.gender === item.value}
+              checked={formik.values[name] === item.value}
               className="mr-2"
             />
 
@@ -40,7 +40,7 @@ function RadioInput({ name, formik, radioOptions, label }) {
 {/* -------------error section--------------- */}
       {formik.errors[name] && formik.touched[name]}
 
-      <div className="mt-1 text-[0.65rem] mb-2 sm:mb-0  text-red-600 mr-2">
+      <div className="mt-1 text-[0.65rem] sm:text-[0.75rem] mb-2 sm:mb-0  text-red-600 mr-2">
         {formik.errors[name]}
       </div>
     </div>

@@ -145,7 +145,7 @@ function CollaborationForm() {
         <section className=" ">
      
           <div className="bg-pink-300  sm:content-center">
-            <form className="  sm:grid sm:grid-cols-2 sm:h-full sm:gap-1 " onSubmit={formik.handleSubmit}>
+            <form className=" h-fit sm:grid sm:grid-cols-2  sm:h-full sm:gap-1 " onSubmit={formik.handleSubmit}>
               <TextFiled
                 label="نام"
                 placeholder=" نام "
@@ -191,7 +191,7 @@ function CollaborationForm() {
               <SelectOptions
               selectOptions={selectOptions}
               formik={formik}
-              name="nationality"
+              name="soldier"
               label="وضعیت نظام وظیفه"
             />
               {/* --------- RadioButton--------------- */}
