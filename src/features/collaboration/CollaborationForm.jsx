@@ -10,7 +10,8 @@ import TextFiled from "../../ui/textFiled";
 import RadioInput from "../../ui/RadioInput";
 import SelectOptions from "../../ui/SelectOption";
 import ExtraTextFiled from "../../ui/ExtraTextFiled";
-// import Calendar from "../../ui/Calendar";
+import CalendarDate from "../../ui/CalendarDate";
+import Stepper from "../../ui/Stepper";
 
 // -----------------------------------------------
 
@@ -19,8 +20,8 @@ const radioOptions = [
   { label: " زن", value: "1" },
 ];
 const marrideOptions = [
-  { label: " مجرد", value: "0" },
-  { label: " متاهل", value: "1" },
+  { label: " مجرد", value: "00" },
+  { label: " متاهل", value: "11" },
 ];
 
 const selectOptions = [
@@ -44,7 +45,7 @@ const initialValues = {
   phoneNumber: "",
   gender: "",
   marride: "",
-  soldier:"",
+  soldier: "",
   birthdate: "",
   address: "",
   degree: "",
@@ -71,12 +72,15 @@ const onSubmit = (values) => {
 };
 // //! -----------------------------------------------------------
 // 3.
+
 const validationSchema = Yup.object({
   name: Yup.string()
-    .required(" لطفا نام و نام خانوادگی خود را وارد کنید.")
+    .required(" لطفا نام  خود را وارد کنید.")
     .min(4, "طول نام نباید کمتر از 6 کاراکتر باشد"),
   family: Yup.string().required("  لطفا نام خانوادگی خود را وارد کنید."),
-  birthdate: Yup.date().required("لطفا تاریخ تولد خود را انتخاب کنید."),
+  birthdate: Yup.date().required("لطفا تاریخ تولد خود را انتخاب کنید.")
+  
+    .typeError("Invalid Date!"),
   email: Yup.string()
     .required(" لطفا ایمیل خود را وارد کنید.")
     .email("فرمت ایمیل نادرست است."),
@@ -103,8 +107,7 @@ const validationSchema = Yup.object({
   salary: Yup.string().required("       لطفا حقوق درخواستی خود را وارد کنید. "),
   uploadFiles: Yup.string().required("لطفا رزومه کاری خود را بارگذاری کنید."),
   // captcha: Yup.string().required("لطفا کد امنیتی را به درستی وارد کنید."),
-soldier:Yup.string().required("لطفا وضعیت نظام وظیفه خود را انتخاب کنید.")
-
+  soldier: Yup.string().required("لطفا وضعیت نظام وظیفه خود را انتخاب کنید."),
 });
 //! ---------------------------------------------------
 function CollaborationForm() {
@@ -127,25 +130,27 @@ function CollaborationForm() {
   }, []);
 
   return (
-    <div className="relative  flex-col  bg-red-100 w-full h-dvh m-10 p-4 shadow-xl rounded-t-3xl">
-      <section className="bg-green-100 z-0 w-full  flex p-2 justify-between items-center   ">
-        <div className="bg-yellow-100   ">
+    <div className="relative bg-yellow-100   flex-col    w-full h-dvh m-10 p-4 shadow-xl rounded-t-3xl">
+      <section className="z-0 w-full  flex p-2 justify-between items-center   ">
+        <div className="  " >
           <h3 className="sm:text-xl font-semibold">فرصت های شغلی</h3>
           <p className="text-sm sm:text-lg">
             اگر مایل به همکاری با مجموعه ما هستید، لطفا فرم زیر را به طور کامل
             پر کرده و برای ما ارسال کنید.
           </p>{" "}
         </div>
-        <div className="bg-orange-300 ">
-          {" "}
+        <div className="">
+      
           <FaEdit className="w-12 h-12" style={{ fill: "#0035ac" }} />
         </div>
       </section>
-      <div className=" bg-blue-100 top-28 sm:top-32 z-10 w-full  absolute  bottom-0 left-0 rounded-t-3xl p-2 ">
+      <div className="bg-white top-28 sm:top-32 z-10 w-full   absolute  bottom-0 left-0 rounded-t-3xl p-2 ">
         <section className=" ">
-     
-          <div className="bg-pink-300  sm:content-center">
-            <form className=" h-fit sm:grid sm:grid-cols-2  sm:h-full sm:gap-1 " onSubmit={formik.handleSubmit}>
+          <div className="  sm:content-center">
+            <form
+              className=" sm:grid sm:grid-cols-2  sm:h-full sm:gap-1 "
+              onSubmit={formik.handleSubmit}
+            >
               <TextFiled
                 label="نام"
                 placeholder=" نام "
@@ -161,9 +166,18 @@ function CollaborationForm() {
                 id="text"
                 formik={formik}
               />
-              {/* <Calendar/> */}
-              
-
+              <CalendarDate
+                label="تاریخ تولد"
+                formik={formik}
+                name="birthdate"
+              />
+              {/* ----------- select options ----------- */}
+              <SelectOptions
+                selectOptions={selectOptions}
+                formik={formik}
+                name="soldier"
+                label="وضعیت نظام وظیفه"
+              />
               {/* <TextFiled
                 label="شماره تماس "
                 placeholder=" 09xxxxxxxxx  "
@@ -187,52 +201,27 @@ function CollaborationForm() {
                 label="آدرس محل سکونت"
                 name="address"
               />
-              {/* ----------- select options ----------- */}
-              <SelectOptions
-              selectOptions={selectOptions}
-              formik={formik}
-              name="soldier"
-              label="وضعیت نظام وظیفه"
-            />
+
               {/* --------- RadioButton--------------- */}
               <RadioInput
                 label="جنسیت"
                 formik={formik}
                 radioOptions={radioOptions}
                 name="gender"
+                value="value"
               />
               <RadioInput
                 label="وضعیت تاهل"
                 formik={formik}
                 radioOptions={marrideOptions}
                 name="marride"
+                value="value"
               />
+            <Stepper/>
             </form>
           </div>
-          {/* ------------stepper section----------------- */}
-          {/* <div className="w-full sm:hidden max-w-md mx-auto bg-indigo-100 border-2 border-indigo-600 rounded-md">
-      <div className="flex items-center justify-between gap-3 p-3 bg-white rounded">
-        <button className="border-none text-base font-medium py-2.5 text-gray-700 transition-all duration-300 hover:text-indigo-600">
-          <span className="flex gap-1.5 items-center text-center">
-            <GrFormNext className="w-5 h-5" />
-            <p className="mt-1"> Next</p>
-          </span>
-        </button>
-
-        <ul className="flex gap-1 items-center">
-          <li className="text-lg font-medium text-gray-900">1</li>
-          <li className="text-base font-normal text-gray-900">/</li>
-          <li className="text-base font-normal text-gray-600">3</li>
-        </ul>
-
-        <button className="   border-none text-base font-medium py-2.5 text-gray-700 transition-all duration-300 hover:text-indigo-600">
-          <span className="flex gap-1.5 items-center text-center">
-            <p className="mt-1"> Back</p>
-            <IoIosArrowBack className="w-4 h-4 " />
-          </span>
-        </button>
-      </div>
-    </div> */}
+        
+    
         </section>
       </div>
     </div>
@@ -240,4 +229,3 @@ function CollaborationForm() {
 }
 
 export default CollaborationForm;
-

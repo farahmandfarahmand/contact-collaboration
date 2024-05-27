@@ -1,47 +1,64 @@
 import React from "react";
+import ErrorFiled from "./ErrorFiled";
+import LabelFiled from "./LabelFiled";
 
 function RadioInput({ name, formik, radioOptions, label }) {
   return (
-    <div className=" gap-x-2 grid grid-cols-1 grid-rows-2 mt-2 ">
+    <div className="mt-2 ">
       {/* ---------label section------------- */}
-      <span className="flex ">
-        <label htmlFor={name} className="mb-1 ml-2 mr-2 text-[0.65rem]">
-          {label}
-        </label>
-        {formik.errors[name] ? (
-          <p className="text-[0.65rem] text-red-600 inline-block ">(*)</p>
-        ) : (
-          <p className="text-[0.65rem] text-gray-500 inline-block ">(*)</p>
-        )}
-      </span>
-      {/* -----------input section------------ */}
-      <div className="flex">
-        {radioOptions.map((item) => (
-          <React.Fragment key={item.value}>
-            <input
-              type="radio"
-              id={item.value}
-              name={name}
-              value={item.value}
-              onChange={formik.handleChange}
-              checked={formik.values[name] === item.value}
-              className="mr-2"
-            />
-
-            <label
-              className="mr-2 text-[0.65rem] sm:text-[0.75rem]"
-              htmlFor={item.value}
-            >
-              {item.label}
-            </label>
-          </React.Fragment>
-        ))}
+      <div className="grid grid-cols-1 w-full sm:mr-4 justify-between  sm:p-0  ">
+        <LabelFiled formik={formik} name={name} label={label} />
+        <ErrorFiled formik={formik} name={name} />
       </div>
-{/* -------------error section--------------- */}
-      {formik.errors[name] && formik.touched[name]}
+      {/* -----------input section------------ */}
+      <div className="inline-block ">
+        {formik.errors[name] && formik.touched[name] ? (
+          <div className=" flex w-1/3 h-3 content-center">
+            {radioOptions.map((item) => (
+              <React.Fragment key={item.value}>
+                <input
+                  type="radio"
+                  id={item.value}
+                  name={name}
+                  value={item.value}
+                  onChange={formik.handleChange}
+                  checked={formik.values[name] === item.value}
+                  className="mr-2"
+                />
 
-      <div className="mt-1 text-[0.65rem] sm:text-[0.75rem] mb-2 sm:mb-0  text-red-600 mr-2">
-        {formik.errors[name]}
+                <label
+                  className="mr-2 text-[0.75rem] content-center sm:text-[0.85rem]"
+                  htmlFor={item.value}
+                >
+                  {item.label}
+                </label>
+              </React.Fragment>
+            ))}
+          </div>
+        ) : (
+          <div className=" flex w-1/3 h-3 -mt-2 content-center">
+            {radioOptions.map((item) => (
+              <React.Fragment key={item.value}>
+                <input
+                  type="radio"
+                  id={item.value}
+                  name={name}
+                  value={item.value}
+                  onChange={formik.handleChange}
+                  checked={formik.values[name] === item.value}
+                  className="mr-2"
+                />
+
+                <label
+                  className="mr-2 text-[0.75rem] content-center sm:text-[0.85rem]"
+                  htmlFor={item.value}
+                >
+                  {item.label}
+                </label>
+              </React.Fragment>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

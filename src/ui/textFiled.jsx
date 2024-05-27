@@ -1,36 +1,37 @@
+import ErrorFiled from "./ErrorFiled";
+import LabelFiled from "./LabelFiled";
+
 function TextFiled({ label, name, type = "text", placeholder, formik }) {
   return (
-    <div className=" flex flex-wrap  justify-between ml-4">
-      <span className="flex w-full justify-between sm:grid sm:grid-cols-1 sm:grid-rows-2 sm:p-0 p-2 mr-1 ">
-        <span className="flex ">
-          <label htmlFor={name} className="mb-1 ml-2 text-[0.75rem]">
-            {label}
-          </label>
-          {formik.errors[name] ? (
-            <p className="text-[0.65rem] text-red-600 inline-block ">(*)</p>
-          ) : (
-            <p className="text-[0.65rem] text-gray-500 inline-block ">(*)</p>
-          )}
-        </span>
-        <span className="mr-1">
-          {formik.errors[name] && formik.touched[name]}
-          <div className="text-[0.65rem]  sm:mb-0 sm:text-[0.75rem] text-red-600">
-            {formik.errors[name]}
-          </div>
-        </span>
+    <div className=" w-full flex flex-wrap sm:grid sm:grid-cols-1 sm:grid-rows-2 sm:mb-2  ml-4">
+      <span className=" flex  h-12   w-full sm:mr-1   justify-between sm:p-0 p-2 ">
+        <LabelFiled formik={formik} name={name} label={label} />
+        <ErrorFiled formik={formik} name={name} />
       </span>
-      <input
-        className="textFiled__input  sm:h-10 sm:w-full  mr-2 hover:shadow-md text-[0.75rem] mb-5"
-        placeholder={placeholder}
-        id={name}
-        type={type}
-        name={name}
-        autoComplete="off"
-        {...formik.getFieldProps(name)}
-        //   value={value}
-        //   onChange={onChange}
-        //  onBlur={onBlur}
-      />
+      {formik.touched[name] && formik.errors[name] ? (
+        <input
+          className="textFiled__input hover:shadow-md  "
+          placeholder={placeholder}
+          id={name}
+          type={type}
+          name={name}
+          autoComplete="off"
+          {...formik.getFieldProps(name)}
+          //   value={value}
+          //   onChange={onChange}
+          //  onBlur={onBlur}
+        />
+      ) : (
+        <input
+          className="textFiled__input  sm:h-10 sm:w-full sm:-mt-4 mr-2 hover:shadow-md text-[0.75rem] mb-5"
+          placeholder={placeholder}
+          id={name}
+          type={type}
+          name={name}
+          autoComplete="off"
+          {...formik.getFieldProps(name)}
+        />
+      )}
     </div>
   );
 }

@@ -1,6 +1,6 @@
 //** @type {import('tailwindcss').Config} */
 
-
+import { nextui } from "@nextui-org/react";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
 function withOpacity(variableName) {
@@ -13,7 +13,11 @@ function withOpacity(variableName) {
 }
 
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       colors: {
@@ -27,8 +31,8 @@ export default {
           300: withOpacity("--color-primary-300"),
           200: withOpacity("--color-primary-200"),
           100: withOpacity("--color-primary-100"),
-          50:withOpacity("--color-primary-50"),
-          0:withOpacity("--color-primaryM")
+          50: withOpacity("--color-primary-50"),
+          0: withOpacity("--color-primaryM"),
         },
         secondary: {
           900: withOpacity("--color-secondary-900"),
@@ -46,9 +50,9 @@ export default {
         success: withOpacity("--color-success"),
         warning: withOpacity("--color-warning"),
         error: withOpacity("--color-error"),
-        third:{
-          900:withOpacity("--color-third-900"),
-        }
+        third: {
+          900: withOpacity("--color-third-900"),
+        },
       },
       fontFamily: {
         sans: ["Vazir", ...fontFamily.sans],
@@ -56,9 +60,10 @@ export default {
       container: {
         center: true,
         padding: "1rem",
-        maxWidth:1288
+        maxWidth: 1288,
       },
     },
   },
-  plugins: [],
+  darkMode: "class",
+  plugins: [nextui()],
 };
