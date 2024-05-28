@@ -8,7 +8,7 @@ function Stepper() {
         <button className="border-none text-base font-medium py-2.5 text-gray-700 transition-all duration-300 hover:text-indigo-600">
           <span className="flex gap-1.5 items-center text-center">
             <GrFormNext className="w-5 h-5" />
-            <p className="mt-1"> Next</p>
+            <p className="mt-1"> بعدی</p>
           </span>
         </button>
 
@@ -20,7 +20,7 @@ function Stepper() {
 
         <button className="   border-none text-base font-medium py-2.5 text-gray-700 transition-all duration-300 hover:text-indigo-600">
           <span className="flex gap-1.5 items-center text-center">
-            <p className="mt-1"> Back</p>
+            <p className="mt-1"> قبلی</p>
             <IoIosArrowBack className="w-4 h-4 " />
           </span>
         </button>

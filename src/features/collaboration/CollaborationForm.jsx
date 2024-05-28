@@ -107,7 +107,7 @@ const validationSchema = Yup.object({
   salary: Yup.string().required("       لطفا حقوق درخواستی خود را وارد کنید. "),
   uploadFiles: Yup.string().required("لطفا رزومه کاری خود را بارگذاری کنید."),
   // captcha: Yup.string().required("لطفا کد امنیتی را به درستی وارد کنید."),
-  soldier: Yup.string().required("لطفا وضعیت نظام وظیفه خود را انتخاب کنید."),
+  soldier: Yup.string().required("لطفا وضعیت نظام وظیفه خود را مشخص کنید."),
 });
 //! ---------------------------------------------------
 function CollaborationForm() {
@@ -144,7 +144,7 @@ function CollaborationForm() {
           <FaEdit className="w-12 h-12" style={{ fill: "#0035ac" }} />
         </div>
       </section>
-      <div className="bg-white  top-28 sm:top-32 z-10 w-full   absolute  bottom-0 left-0 rounded-t-3xl p-2 ">
+      <div className="bg-white  top-28 sm:top-32 z-10 w-full   absolute  bottom-0 left-0 p-2 ">
        
          
             <form
@@ -160,10 +160,10 @@ function CollaborationForm() {
               />
               <TextFiled
                 label="نام خانوادگی"
-                placeholder="  نام خانوادگی"
+                placeholder=" نام خانوادگی"
                 name="family"
                 type="text"
-                id="text"
+                id="family"
                 formik={formik}
               />
               <CalendarDate
