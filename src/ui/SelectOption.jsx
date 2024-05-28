@@ -3,7 +3,7 @@ import LabelFiled from "./LabelFiled";
 
 function selectOptions({ label, formik, name, selectOptions }) {
   return (
-    <div className="bg-green-100 w-full flex flex-wrap ">
+    <div className=" w-full flex flex-wrap ">
     <span className="flex  w-full  justify-between  p-2 ">
       <LabelFiled formik={formik} name={name} label={label} />
         <ErrorFiled formik={formik} name={name}/>
