@@ -48,7 +48,7 @@
 
 @layer components {
   .textFiled__input {
-    @apply py-2 ml-2  px-1 text-sm mr-1 border-b-2  
+    @apply py-2  px-4 text-sm m-1 border-b-2  
     shadow-sm bg-gray-50 border border-gray-300
      text-gray-900 rounded-lg focus:ring-primary-500
       focus:border-primary-500 text-[0.85rem] sm:text-[1rem] block w-full p-2
@@ -71,7 +71,7 @@
   }
 
   .extraTextFiled__input {
-    @apply  p-1  w-full -mt-4
+    @apply  m-1 w-full px-4
         justify-center  text-gray-900 border-2
         bg-gray-50   transition-all duration-300 ease-out
         focus:shadow-lg focus:shadow-primary-200
@@ -81,10 +81,10 @@
          sm:text-[0.85rem];
   }
   .selectOption__input {
-    @apply bg-gray-50   w-full px-1 sm:w-[95%] block border-solid border-2 border-gray-300
+    @apply bg-gray-50  m-1  w-full py-2  px-4 block border-solid border-2 border-gray-300
       shadow-sm hover:shadow-md  focus:shadow-lg focus:shadow-primary-200 text-gray-400 rounded-lg 
     transition-all duration-300 ease-out focus:border-primary-500 focus:ring-primary-500
-    ml-4  h-10 sm:-mt-9 sm:ml-4 mr-2 text-[0.85rem] sm:text-[1rem]
+     text-[0.85rem] sm:text-[1rem]
  
   }
 }

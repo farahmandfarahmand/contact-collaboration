@@ -144,11 +144,11 @@ function CollaborationForm() {
           <FaEdit className="w-12 h-12" style={{ fill: "#0035ac" }} />
         </div>
       </section>
-      <div className="bg-white top-28 sm:top-32 z-10 w-full   absolute  bottom-0 left-0 rounded-t-3xl p-2 ">
-        <section className=" ">
-          <div className="  sm:content-center">
+      <div className="bg-white  top-28 sm:top-32 z-10 w-full   absolute  bottom-0 left-0 rounded-t-3xl p-2 ">
+       
+         
             <form
-              className=" sm:grid sm:grid-cols-2  sm:h-full sm:gap-1 "
+              className="bg-red-100 flex flex-wrap gap-4 sm:grid sm:grid-cols-2  sm:gap-4 "
               onSubmit={formik.handleSubmit}
             >
               <TextFiled
@@ -219,10 +219,10 @@ function CollaborationForm() {
               />
             <Stepper/>
             </form>
-          </div>
+        
         
     
-        </section>
+     
       </div>
     </div>
   );
