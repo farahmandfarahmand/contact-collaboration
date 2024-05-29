@@ -12,7 +12,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <Toaster />
-      <div className="container xl:max-w-screen-lg ">
+      <div className="container xl:max-w-screen-lg   ">
         <Routes>
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/collaboration" element={<CollaborationUs />} />

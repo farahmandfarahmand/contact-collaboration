@@ -59,22 +59,7 @@ function PersonalInfo({ formik }) {
           name="soldier"
           label="وضعیت نظام وظیفه"
         />
-        {/* <TextFiled
-                label="شماره تماس "
-                placeholder=" 09xxxxxxxxx  "
-                name="phoneNumber"
-                type="number"
-                id="number"
-                formik={formik}
-              />
-              <TextFiled
-                label="ایمیل"
-                placeholder=" your@gmail.com "
-                type="email"
-                name="email"
-                id="email"
-                formik={formik}
-              /> */}
+      
         {/* ----------------address Data------------ */}
         <ExtraTextFiled
           formik={formik}
