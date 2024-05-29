@@ -3,7 +3,7 @@ import { CgChevronDoubleLeft } from "react-icons/cg";
 function DesktopStepper() {
   return (
     <div className=" hidden sm:block sm:col-span-2  ">
-       <ol className="lg:flex  items-center w-full space-y-4 lg:space-y-0 lg:space-x-4">
+       <ol className="sm:flex  items-center w-full space-y-4 lg:space-y-0 lg:space-x-4">
       <li className="relative ">
           <a  href="https://pagedone.io/" className="flex items-center font-medium w-full  ">
               <span className="w-6 h-6 bg-indigo-600 border border-transparent rounded-full flex justify-center items-center mr-3 text-sm text-white lg:w-8 lg:h-8"> 1 </span>

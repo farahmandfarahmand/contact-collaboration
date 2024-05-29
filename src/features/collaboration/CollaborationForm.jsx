@@ -6,33 +6,15 @@ import { useFormik } from "formik";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import * as Yup from "yup";
-import TextFiled from "../../ui/textFiled";
-import RadioInput from "../../ui/RadioInput";
-import SelectOptions from "../../ui/SelectOption";
-import ExtraTextFiled from "../../ui/ExtraTextFiled";
-import CalendarDate from "../../ui/CalendarDate";
-import Stepper from "../../ui/Stepper";
+import PersonalInfo from "../step/PersonalInfo";
 import DesktopStepper from "../../ui/DesktopStepper";
+import Stepper from "../../ui/Stepper";
+import AccountInfo from "../step/AccountInfo";
+import EducationalInfo from "../step/EducationalInfo";
+import JobInfo from "../step/JobInfo";
 
 // -----------------------------------------------
 
-const radioOptions = [
-  { label: " مرد", value: "0" },
-  { label: " زن", value: "1" },
-];
-const marrideOptions = [
-  { label: " مجرد", value: "00" },
-  { label: " متاهل", value: "11" },
-];
-
-const selectOptions = [
-  { label: "   انتخاب کنید...", value: "" },
-  { label: " درحال خدمت", value: "0" },
-  { label: " کارت پایان خدمت", value: "1" },
-  { label: " معاف از خدمت", value: "2" },
-  { label: "  مشمول خدمت", value: "3" },
-  { label: "   بانو هستم", value: "4" },
-];
 // ------------------------
 // //? 1. managin store
 // //? 2. handeling form submition
@@ -79,8 +61,9 @@ const validationSchema = Yup.object({
     .required(" لطفا نام  خود را وارد کنید.")
     .min(4, "طول نام نباید کمتر از 6 کاراکتر باشد"),
   family: Yup.string().required("  لطفا نام خانوادگی خود را وارد کنید."),
-  birthdate: Yup.date().required("لطفا تاریخ تولد خود را انتخاب کنید.")
-  
+  birthdate: Yup.date()
+    .required("لطفا تاریخ تولد خود را انتخاب کنید.")
+
     .typeError("Invalid Date!"),
   email: Yup.string()
     .required(" لطفا ایمیل خود را وارد کنید.")
@@ -110,9 +93,26 @@ const validationSchema = Yup.object({
   // captcha: Yup.string().required("لطفا کد امنیتی را به درستی وارد کنید."),
   soldier: Yup.string().required("لطفا وضعیت نظام وظیفه خود را مشخص کنید."),
 });
+
+//!----------------------------------------------------
+
 //! ---------------------------------------------------
 function CollaborationForm() {
   const [formValues, setFormValues] = useState(null);
+
+  // const [activeStep, setActiveStep] = useState(1);
+  // const [isLastStep, setIsLastStep] = useState(false);
+  // const [isFirstStep, setIsFirstStep] = useState(false);
+
+  // const handleNext = () => !isLastStep && setActiveStep((cur) => cur + 1);
+  // const handlePrev = () => !isFirstStep && setActiveStep((cur) => cur - 1);
+ 
+  const [currentStep, setCurrentStep] =useState(1)
+  const NUMBER_OF_STEPS = 5;
+  const isFinalStep = (index) => index === NUMBER_OF_STEPS - 1
+
+  const goToNextStep = () => setCurrentStep(prev => prev === NUMBER_OF_STEPS - 1 ? prev : prev + 1)
+  const goToPreviousStep = () => setCurrentStep(prev => prev <= 0 ? prev : prev - 1)
   const formik = useFormik({
     enableReinitialize: true,
     initialValues: formValues || initialValues,
@@ -130,10 +130,31 @@ function CollaborationForm() {
       .catch((err) => console.log(err));
   }, []);
 
+  const renderStep = () => {
+    
+    switch (currentStep) {
+      
+      case 1:
+        return (
+     
+          <PersonalInfo formik={formik}  currentStep={currentStep} numberOfSteps={NUMBER_OF_STEPS} isFinalStep={isFinalStep}   />
+        );
+      // return <SendOTPform setStep={setStep} phoneNumber={phoneNumber} onChange={(e)=>setPhoneNumber(e.target.value)}/>;
+      case 2:
+        return <AccountInfo />;
+      case 3:
+        return <EducationalInfo />;
+      case 4:
+        return <JobInfo />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <div className="relative bg-[#dbe2ff]  flex-col   w-full h-dvh m-10 p-4 shadow-xl rounded-t-3xl">
       <section className="z-0 w-full  flex p-2 justify-between items-center   ">
-        <div className="  " >
+        <div className="  ">
           <h3 className="sm:text-xl font-semibold">فرصت های شغلی</h3>
           <p className="text-sm sm:text-lg">
             اگر مایل به همکاری با مجموعه ما هستید، لطفا فرم زیر را به طور کامل
@@ -141,95 +162,25 @@ function CollaborationForm() {
           </p>{" "}
         </div>
         <div className="">
-      
           <FaEdit className="w-12 h-12" style={{ fill: "#0035ac" }} />
         </div>
       </section>
-      <div className="bg-white  top-28 sm:top-32 z-10 w-full   absolute  bottom-0 left-0 p-2 ">
+      <div className="bg-white  top-28 sm:top-32 z-10 w-full    absolute  bottom-0 left-0 p-2 ">
+        {/* -----------stepper for desktop----------- */}
+        <DesktopStepper />
+    {renderStep()}
        
-         
-            <form
-              className=" flex flex-wrap gap-4 sm:grid sm:grid-cols-2  sm:gap-4 "
-              onSubmit={formik.handleSubmit}
-            >
-               <DesktopStepper/>
-              <TextFiled
-                label="نام"
-                placeholder=" نام "
-                name="name"
-                id="name"
-                formik={formik}
-              />
-              <TextFiled
-                label="نام خانوادگی"
-                placeholder=" نام خانوادگی"
-                name="family"
-                type="text"
-                id="family"
-                formik={formik}
-              />
-              <CalendarDate
-                label="تاریخ تولد"
-                formik={formik}
-                name="birthdate"
-              />
-              {/* ----------- select options ----------- */}
-              <SelectOptions
-                selectOptions={selectOptions}
-                formik={formik}
-                name="soldier"
-                label="وضعیت نظام وظیفه"
-              />
-              {/* <TextFiled
-                label="شماره تماس "
-                placeholder=" 09xxxxxxxxx  "
-                name="phoneNumber"
-                type="number"
-                id="number"
-                formik={formik}
-              />
-              <TextFiled
-                label="ایمیل"
-                placeholder=" your@gmail.com "
-                type="email"
-                name="email"
-                id="email"
-                formik={formik}
-              /> */}
-              {/* ----------------address Data------------ */}
-              <ExtraTextFiled
-                formik={formik}
-                placeholder="    نشانی محل سکونت ..."
-                label="آدرس محل سکونت"
-                name="address"
-              />
-
-              {/* --------- RadioButton--------------- */}
-              <RadioInput
-                label="جنسیت"
-                formik={formik}
-                radioOptions={radioOptions}
-                name="gender"
-                value="value"
-              />
-              <RadioInput
-                label="وضعیت تاهل"
-                formik={formik}
-                radioOptions={marrideOptions}
-                name="marride"
-                value="value"
-              />
-            <Stepper/>
-           
-           <div className="flex justify-between col-span-2">
-           <button className="w-52 h-12 hidden mr-4 sm:block shadow-sm rounded-full bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 text-white text-base font-semibold leading-7">بعدی</button>
-            <button className="w-52 h-12 hidden ml-4 sm:block shadow-sm rounded-full bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 text-white text-base font-semibold leading-7">قبلی</button>
-           </div>
-            </form>
-        
-        
-    
-     
+        {/* -----------stepper for mobile----------- */}
+        <Stepper />
+        {/*  ------buttons of step---------- */}
+        <div className="flex justify-between mt-10 col-span-2">
+          <button onClick={goToNextStep}   className="w-52 h-12 hidden mr-4 sm:block shadow-sm rounded-full bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 text-white text-base font-semibold leading-7">
+            بعدی
+          </button>
+          <button onClick={goToPreviousStep}  className="w-52 h-12 hidden ml-4 sm:block shadow-sm rounded-full bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 text-white text-base font-semibold leading-7">
+            قبلی
+          </button>
+        </div>
       </div>
     </div>
   );
