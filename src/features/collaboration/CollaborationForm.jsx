@@ -12,6 +12,7 @@ import SelectOptions from "../../ui/SelectOption";
 import ExtraTextFiled from "../../ui/ExtraTextFiled";
 import CalendarDate from "../../ui/CalendarDate";
 import Stepper from "../../ui/Stepper";
+import DesktopStepper from "../../ui/DesktopStepper";
 
 // -----------------------------------------------
 
@@ -40,7 +41,7 @@ const selectOptions = [
 // 1.
 const initialValues = {
   name: "",
-  familly: "",
+  family: "",
   email: "",
   phoneNumber: "",
   gender: "",
@@ -130,7 +131,7 @@ function CollaborationForm() {
   }, []);
 
   return (
-    <div className="relative bg-yellow-100   flex-col    w-full h-dvh m-10 p-4 shadow-xl rounded-t-3xl">
+    <div className="relative bg-[#dbe2ff]  flex-col   w-full h-dvh m-10 p-4 shadow-xl rounded-t-3xl">
       <section className="z-0 w-full  flex p-2 justify-between items-center   ">
         <div className="  " >
           <h3 className="sm:text-xl font-semibold">فرصت های شغلی</h3>
@@ -148,9 +149,10 @@ function CollaborationForm() {
        
          
             <form
-              className="bg-red-100 flex flex-wrap gap-4 sm:grid sm:grid-cols-2  sm:gap-4 "
+              className=" flex flex-wrap gap-4 sm:grid sm:grid-cols-2  sm:gap-4 "
               onSubmit={formik.handleSubmit}
             >
+               <DesktopStepper/>
               <TextFiled
                 label="نام"
                 placeholder=" نام "
@@ -218,6 +220,11 @@ function CollaborationForm() {
                 value="value"
               />
             <Stepper/>
+           
+           <div className="flex justify-between col-span-2">
+           <button className="w-52 h-12 hidden mr-4 sm:block shadow-sm rounded-full bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 text-white text-base font-semibold leading-7">بعدی</button>
+            <button className="w-52 h-12 hidden ml-4 sm:block shadow-sm rounded-full bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 text-white text-base font-semibold leading-7">قبلی</button>
+           </div>
             </form>
         
         
