@@ -101,19 +101,12 @@ const validationSchema = Yup.object({
 function CollaborationForm() {
   const [formValues, setFormValues] = useState(null);
 
-  // const [activeStep, setActiveStep] = useState(1);
-  const [isLastStep, setIsLastStep] = useState(false);
-  const [isFirstStep, setIsFirstStep] = useState(false);
-
-  // const handleNext = () => !isLastStep && setActiveStep((cur) => cur + 1);
-  // const handlePrev = () => !isFirstStep && setActiveStep((cur) => cur - 1);
-
   const [currentStep, setCurrentStep] = useState(1);
   const NUMBER_OF_STEPS = 5;
-  const isFinalStep = (index) => index === NUMBER_OF_STEPS - 1;
-console.log(isFinalStep);
+
   const goToNextStep = () =>
     setCurrentStep((prev) => (prev === NUMBER_OF_STEPS - 1 ? prev : prev + 1));
+
   const goToPreviousStep = () =>
     setCurrentStep((prev) => (prev <= 1 ? prev : prev - 1));
 
@@ -149,6 +142,9 @@ console.log(isFinalStep);
     }
   };
 
+  const handelSubmit= (values)=>{
+    console.log(values)
+  }
   return (
     <div className="relative bg-[#dbe2ff]  flex-col h-svh w-full m-10 p-4 shadow-xl rounded-t-3xl">
       <section className="z-0 w-full  flex p-2 justify-between items-center   ">
@@ -165,7 +161,10 @@ console.log(isFinalStep);
       </section>
       <div className="bg-white  top-28 sm:top-32 z-10 w-full    absolute  bottom-0 left-0 p-2 ">
         {/* -----------stepper for desktop----------- */}
-        <DesktopStepper />
+        <DesktopStepper
+          currentStep={currentStep}
+          numberOfStep={NUMBER_OF_STEPS - 1}
+        />
         {renderStep()}
 
         {/* -----------stepper for mobile----------- */}
@@ -173,20 +172,26 @@ console.log(isFinalStep);
         <div className="w-full absolute bottom-0 left-0 mt-5 sm:hidden max-w-2xl mx-auto bg-indigo-100 border-2 border-primary-700 rounded-md">
           <div className="flex  items-center justify-between gap-3 p-3 bg-white rounded">
             <button
-            disabled={isFirstStep}
               onClick={goToNextStep}
-              className="border-none text-base font-medium py-2.5 text-gray-700 transition-all duration-300 hover:text-indigo-600"
+              className={`${
+                currentStep === NUMBER_OF_STEPS - 1
+                  ? "text-gray-400 font-medium"
+                  : "border-none text-base font-medium py-2.5 text-gray-700 transition-all duration-300 hover:text-indigo-600"
+              }`}
             >
               <span className="flex gap-1.5 items-center text-center">
                 <GrFormNext className="w-5 h-5" />
                 <p className="mt-1"> بعدی</p>
               </span>
             </button>
-            <Stepper />
+            <Stepper currentStep={currentStep} numberOfStep={NUMBER_OF_STEPS} />
             <button
-            disabled={isLastStep}
               onClick={goToPreviousStep}
-              className="   border-none text-base font-medium py-2.5 text-gray-700 transition-all duration-300 hover:text-indigo-600"
+              className={`${
+                currentStep === 1
+                  ? "text-gray-400 font-medium "
+                  : " border-none text-base font-medium py-2.5 text-gray-700 transition-all duration-300 hover:text-indigo-600"
+              }`}
             >
               <span className="flex gap-1.5 items-center text-center">
                 <p className="mt-1"> قبلی</p>
@@ -195,20 +200,49 @@ console.log(isFinalStep);
             </button>
           </div>
         </div>
+
         {/*  ------buttons of step for Descktop stepper---------- */}
         <div className="flex w-full items-end mt-10  gap-4 ">
-           {/* <p> {!formik.isValid === true ? "True" : "False"} </p> */}
-          <button
-          //  disabled={!formik.isValid}
+          {currentStep <= NUMBER_OF_STEPS -1 ? (
+            <button
+              onClick={goToNextStep}
+              className={`${
+                currentStep === NUMBER_OF_STEPS - 1
+                  ? "hidden"
+                  : "w-48 h-12  hidden mr-4 sm:block shadow-sm rounded-md bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 text-white text-base font-semibold leading-7"
+              }`}
+            >
+              بعدی
+            </button>
+          ) : currentStep == 4 ? (
+            <button
+             onSubmit={handelSubmit()}
+              className="w-48 h-12  mr-4 sm:block shadow-sm rounded-md bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 text-white text-base font-semibold leading-7"
+            >
+              ارسال
+            </button>
+          ) : (
+            ""
+          )}
+          {/* <button
             onClick={goToNextStep}
-            className="w-48 h-12  hidden mr-4 sm:block shadow-sm rounded-md bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 text-white text-base font-semibold leading-7"
+            className={`${
+              (currentStep === NUMBER_OF_STEPS - 1
+                ? "hidden"
+                : "w-48 h-12  hidden mr-4 sm:block shadow-sm rounded-md bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 text-white text-base font-semibold leading-7") 
+              
+            }`}
           >
             بعدی
-          </button>
+          </button> */}
           <button
-          //  disabled={!formik.isValid}
             onClick={goToPreviousStep}
-            className="w-48 h-12 hidden ml-4 sm:block shadow-sm rounded-md bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 text-white text-base font-semibold leading-7"
+            className={`${
+              (currentStep === 1
+                ? "w-48 h-12 hidden ml-4 sm:block shadow-sm rounded-md bg-gray-400 transition-all duration-700 text-white text-base font-semibold leading-7"
+                : "w-48 h-12 hidden ml-4 sm:block shadow-sm rounded-md bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 text-white text-base font-semibold leading-7") ||
+              (currentStep === NUMBER_OF_STEPS - 1 ? "hidden" : "")
+            }`}
           >
             قبلی
           </button>
