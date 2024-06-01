@@ -3,7 +3,7 @@
 import { nextui } from "@nextui-org/react";
 
 import { fontFamily } from "tailwindcss/defaultTheme";
-
+import tailwindFormPlugin from "@tailwindcss/forms";
 function withOpacity(variableName) {
   return ({ opacityValue }) => {
     if (opacityValue !== undefined) {
@@ -18,7 +18,6 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
-   
   ],
   theme: {
     extend: {
@@ -67,7 +66,10 @@ export default {
     },
   },
   darkMode: "class",
-  plugins: [nextui(),
-   
+  plugins: [
+    nextui(),
+    tailwindFormPlugin({
+      strategy: "class", // only generate classes
+    }),
   ],
 };

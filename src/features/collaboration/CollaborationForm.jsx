@@ -142,11 +142,11 @@ function CollaborationForm() {
     }
   };
 
-  const handelSubmit= (values)=>{
-    console.log(values)
-  }
+  const handelSubmit = (values) => {
+    console.log(values);
+  };
   return (
-    <div className="relative bg-[#dbe2ff]  flex-col h-svh w-full m-10 p-4 shadow-xl rounded-t-3xl">
+    <div className="relative  bg-[#dbe2ff] flex-col h-[700px] sm:h-[760px] w-full  p-4 shadow-xl rounded-t-3xl">
       <section className="z-0 w-full  flex p-2 justify-between items-center   ">
         <div className="  ">
           <h3 className="sm:text-xl font-semibold">فرصت های شغلی</h3>
@@ -159,7 +159,7 @@ function CollaborationForm() {
           <FaEdit className="w-12 h-12" style={{ fill: "#0035ac" }} />
         </div>
       </section>
-      <div className="bg-white  top-28 sm:top-32 z-10 w-full    absolute  bottom-0 left-0 p-2 ">
+      <div className="bg-white h-[700px] sm:h-[670px] top-28  w-full rounded-t-3xl  sm:top-32 z-10  absolute  bottom-0 left-0 p-2 ">
         {/* -----------stepper for desktop----------- */}
         <DesktopStepper
           currentStep={currentStep}
@@ -202,46 +202,30 @@ function CollaborationForm() {
         </div>
 
         {/*  ------buttons of step for Descktop stepper---------- */}
-        <div className="flex w-full items-end mt-10  gap-4 ">
-          {currentStep <= NUMBER_OF_STEPS -1 ? (
+        <div className="flex w-full justify-evenly absolute bottom-0 mb-12  gap-4 ">
+          {currentStep <= NUMBER_OF_STEPS - 2 ? (
             <button
+              // disabled={!formik.isValid}
               onClick={goToNextStep}
-              className={`${
-                currentStep === NUMBER_OF_STEPS - 1
-                  ? "hidden"
-                  : "w-48 h-12  hidden mr-4 sm:block shadow-sm rounded-md bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 text-white text-base font-semibold leading-7"
-              }`}
+              className="w-48 h-12  hidden mr-4 sm:block shadow-sm rounded-md bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 text-white text-base font-semibold leading-7"
             >
               بعدی
             </button>
-          ) : currentStep == 4 ? (
+          ) :  (
             <button
-             onSubmit={handelSubmit()}
-              className="w-48 h-12  mr-4 sm:block shadow-sm rounded-md bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 text-white text-base font-semibold leading-7"
+              onSubmit={handelSubmit()}
+              className="w-48 h-12 block mr-4 sm:block shadow-sm rounded-md bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 text-white text-base font-semibold leading-7"
             >
               ارسال
             </button>
-          ) : (
-            ""
-          )}
-          {/* <button
-            onClick={goToNextStep}
-            className={`${
-              (currentStep === NUMBER_OF_STEPS - 1
-                ? "hidden"
-                : "w-48 h-12  hidden mr-4 sm:block shadow-sm rounded-md bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 text-white text-base font-semibold leading-7") 
-              
-            }`}
-          >
-            بعدی
-          </button> */}
+          ) }
+ 
           <button
             onClick={goToPreviousStep}
             className={`${
-              (currentStep === 1
+              currentStep === 1
                 ? "w-48 h-12 hidden ml-4 sm:block shadow-sm rounded-md bg-gray-400 transition-all duration-700 text-white text-base font-semibold leading-7"
-                : "w-48 h-12 hidden ml-4 sm:block shadow-sm rounded-md bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 text-white text-base font-semibold leading-7") ||
-              (currentStep === NUMBER_OF_STEPS - 1 ? "hidden" : "")
+                : "w-48 h-12 hidden ml-4 sm:block shadow-sm rounded-md bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 text-white text-base font-semibold leading-7"
             }`}
           >
             قبلی

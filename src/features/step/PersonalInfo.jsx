@@ -28,7 +28,7 @@ const selectOptions = [
 function PersonalInfo({ formik }) {
   
   return (
-    <div className="sm:mt-10">
+    <div className="sm:mt-10 ">
       
       <form
         className=" flex flex-wrap gap-4 sm:grid sm:grid-cols-2  sm:gap-4 "
