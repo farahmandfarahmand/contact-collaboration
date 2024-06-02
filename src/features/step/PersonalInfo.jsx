@@ -4,9 +4,6 @@ import SelectOptions from "../../ui/SelectOption";
 import ExtraTextFiled from "../../ui/ExtraTextFiled";
 import CalendarDate from "../../ui/CalendarDate";
 
-
-
-
 // ------------------
 const radioOptions = [
   { label: " مرد", value: "0" },
@@ -27,18 +24,10 @@ const selectOptions = [
 ];
 //   ----------------
 function PersonalInfo({ formik }) {
- 
-
   return (
     <div className="sm:mt-10 ">
-      
-      <div
-        className=" flex flex-wrap gap-4 sm:grid sm:grid-cols-2  sm:gap-4 "
-      
-      >
-        
+      <div className=" flex flex-wrap gap-4 sm:grid sm:grid-cols-2  sm:gap-4 ">
         <TextFiled
-   
           label="نام"
           placeholder=" نام "
           name="name"
@@ -62,7 +51,7 @@ function PersonalInfo({ formik }) {
           name="soldier"
           label="وضعیت نظام وظیفه"
         />
-      
+
         {/* ----------------address Data------------ */}
         <ExtraTextFiled
           formik={formik}
@@ -86,9 +75,6 @@ function PersonalInfo({ formik }) {
           name="marride"
           value="value"
         />
-       
-
-        
       </div>
     </div>
   );

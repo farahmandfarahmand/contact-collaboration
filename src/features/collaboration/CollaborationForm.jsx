@@ -222,7 +222,7 @@ function CollaborationForm() {
             <button
             type="submit"
            
-              className="w-48 h-12 block mr-4 sm:block shadow-sm rounded-md bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 text-white text-base font-semibold leading-7"
+              className="w-48 h-12 mb-12 block mr-4 sm:block shadow-sm rounded-md bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 text-white text-base font-semibold leading-7"
             >
               ارسال
             </button>
