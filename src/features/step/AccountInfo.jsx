@@ -4,9 +4,9 @@ function AccountInfo({formik}) {
     return ( 
         <div className="sm:mt-10">
       
-        <form
+        <div
           className=" flex flex-wrap gap-4 sm:grid sm:grid-cols-2  sm:gap-4 "
-          onSubmit={formik.handleSubmit}
+     
         >
           
        
@@ -30,7 +30,7 @@ function AccountInfo({formik}) {
        
   
           
-        </form>
+        </div>
       </div>
      );
 }

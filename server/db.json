@@ -7,30 +7,28 @@
       "phoneNumber": "09141111111",
       "email": "far@gmail.com",
       "message": "salam khubid? "
-    },
+    }
+  ],
+  "infoForm": [
     {
-      "name": "hamed",
-      "family": "hamedddddi",
-      "phoneNumber": 9141111111,
-      "email": "aa@gmail.com",
-      "message": "cvxdffgff",
-      "id": "wwgjFwv"
-    },
-    {
-      "name": "hamed",
-      "family": "hamedddddi",
-      "phoneNumber": 9141111111,
-      "email": "aa@gmail.com",
-      "message": "cvxdffgff",
-      "id": "kD8P1dU"
-    },
-    {
-      "name": "dddrrr",
-      "family": "ddddd",
-      "phoneNumber": 88888888888,
-      "email": "aa@gmail.com",
-      "message": "dsfsdfsdfsdfds",
-      "id": "MCUB_ZN"
+      "id": "1",
+      "name": "hadi",
+      "family": "farahmand",
+      "gender": "0",
+      "marride": "00",
+      "soldier": "در حال خدمت",
+      "birthdate": "1990-01-02",
+      "address": "تهران-شریعتی",
+      "email": "hadi@gmail.com",
+      "phoneNumber": "09141111111",
+      "degree": "لیسانس",
+      "speciality": "نرم افزار",
+      "university": "آزاد",
+      "requestForJob": "فرانت اند",
+      "stateOfJob": "بیکار",
+      "historyJob": "ندارم",
+      "salary": "100000",
+      "uploadFiles": "یییی"
     }
   ]
 }

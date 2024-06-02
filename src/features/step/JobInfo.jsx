@@ -20,9 +20,9 @@ const radioOptions = [
 function JobInfo({ formik }) {
   return (
     <div className="sm:mt-10 sm:col-span-2">
-      <form
+      <div
         className=" flex flex-wrap gap-4 sm:grid sm:grid-cols-2  sm:gap-4 "
-        onSubmit={formik.handleSubmit}
+       
       >
         <SelectOptions
           selectOptions={selectOptions}
@@ -34,7 +34,7 @@ function JobInfo({ formik }) {
           label=" وضعیت اشتغال "
           placeholder="  "
           name="stateOfJob"
-          type="number"
+          type="text"
           id="number"
           formik={formik}
         />
@@ -61,7 +61,7 @@ function JobInfo({ formik }) {
           name="uploadFiles"
           formik={formik}
         />
-      </form>
+      </div>
     </div>
   );
 }

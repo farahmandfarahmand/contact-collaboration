@@ -14,6 +14,7 @@ function ExtraTextFiled({ label, name, type = "text", placeholder, formik }) {
           type={type}
           id="large-input"
           placeholder={placeholder}
+          autoComplete="off"
           rows="4"
           // cols="45"
           className="extraTextFiled__input "

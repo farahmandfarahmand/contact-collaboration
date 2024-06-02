@@ -6,6 +6,7 @@ import CalendarDate from "../../ui/CalendarDate";
 
 
 
+
 // ------------------
 const radioOptions = [
   { label: " مرد", value: "0" },
@@ -26,16 +27,18 @@ const selectOptions = [
 ];
 //   ----------------
 function PersonalInfo({ formik }) {
-  
+ 
+
   return (
     <div className="sm:mt-10 ">
       
-      <form
+      <div
         className=" flex flex-wrap gap-4 sm:grid sm:grid-cols-2  sm:gap-4 "
-        onSubmit={formik.handleSubmit}
+      
       >
         
         <TextFiled
+   
           label="نام"
           placeholder=" نام "
           name="name"
@@ -86,7 +89,7 @@ function PersonalInfo({ formik }) {
        
 
         
-      </form>
+      </div>
     </div>
   );
 }

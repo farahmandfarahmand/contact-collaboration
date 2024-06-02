@@ -15,9 +15,9 @@ const selectOptions = [
 function EducationalInfo({ formik }) {
   return (
     <div className="sm:mt-10">
-      <form
+      <div
         className=" flex flex-wrap gap-4 sm:grid sm:grid-cols-2  sm:gap-4 "
-        onSubmit={formik.handleSubmit}
+     
       >
         <SelectOptions
           selectOptions={selectOptions}
@@ -41,7 +41,7 @@ function EducationalInfo({ formik }) {
           id="speciality"
           formik={formik}
         />
-      </form>
+      </div>
     </div>
   );
 }

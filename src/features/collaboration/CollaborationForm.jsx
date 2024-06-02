@@ -48,9 +48,9 @@ const initialValues = {
 // 2.-------------------
 const onSubmit = (values) => {
   console.log(values);
-  console.log({ ...values, newData: "19 jan 1984" });
+ 
   axios
-    .post("http://localhost:8000/users", values)
+    .post("http://localhost:8000/infoForm", values)
     .then((res) => console.log(res.data))
     .catch((err) => console.log(err));
 };
@@ -99,7 +99,9 @@ const validationSchema = Yup.object({
 
 //! ---------------------------------------------------
 function CollaborationForm() {
+
   const [formValues, setFormValues] = useState(null);
+  
 
   const [currentStep, setCurrentStep] = useState(1);
   const NUMBER_OF_STEPS = 5;
@@ -119,18 +121,22 @@ function CollaborationForm() {
     validateOnMount: true,
   });
 
+
+ 
+  console.log(formik.values);
   useEffect(() => {
     axios
-      .get("http://localhost:8000/users/1")
+      .get("http://localhost:8000/infoForm/1")
       .then((res) => setFormValues(res.data))
 
       .catch((err) => console.log(err));
   }, []);
 
+  
   const renderStep = () => {
     switch (currentStep) {
       case 1:
-        return <PersonalInfo formik={formik} />;
+        return <PersonalInfo  formik={formik} />;
       case 2:
         return <AccountInfo formik={formik} />;
       case 3:
@@ -142,9 +148,10 @@ function CollaborationForm() {
     }
   };
 
-  const handelSubmit = (values) => {
-    console.log(values);
-  };
+  // const handelSubmit = (values) => {
+  //   console.log(values);
+
+  // };
   return (
     <div className="relative  bg-[#dbe2ff] flex-col h-[700px] sm:h-[760px] w-full  p-4 shadow-xl rounded-t-3xl">
       <section className="z-0 w-full  flex p-2 justify-between items-center   ">
@@ -159,7 +166,7 @@ function CollaborationForm() {
           <FaEdit className="w-12 h-12" style={{ fill: "#0035ac" }} />
         </div>
       </section>
-      <div className="bg-white h-[700px] sm:h-[670px] top-28  w-full rounded-t-3xl  sm:top-32 z-10  absolute  bottom-0 left-0 p-2 ">
+      <form onSubmit={formik.handleSubmit}    className="bg-white h-[700px] sm:h-[670px] top-28  w-full rounded-t-3xl  sm:top-32 z-10  absolute  bottom-0 left-0 p-2 ">
         {/* -----------stepper for desktop----------- */}
         <DesktopStepper
           currentStep={currentStep}
@@ -213,7 +220,8 @@ function CollaborationForm() {
             </button>
           ) :  (
             <button
-              onSubmit={handelSubmit()}
+            type="submit"
+           
               className="w-48 h-12 block mr-4 sm:block shadow-sm rounded-md bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 text-white text-base font-semibold leading-7"
             >
               ارسال
@@ -231,7 +239,7 @@ function CollaborationForm() {
             قبلی
           </button>
         </div>
-      </div>
+      </form>
     </div>
   );
 }
