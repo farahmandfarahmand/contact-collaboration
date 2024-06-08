@@ -29,6 +29,50 @@
       "historyJob": "ندارم",
       "salary": "100000",
       "uploadFiles": "یییی"
-    }
+    },
+    [
+      {
+        "id": "1",
+        "name": "hadi",
+        "family": "farahmand",
+        "gender": "0",
+        "marride": "00",
+        "soldier": "در حال خدمت",
+        "birthdate": "1990-01-02",
+        "address": "تهران-شریعتی",
+        "email": "hadi@gmail.com",
+        "phoneNumber": "09141111111",
+        "degree": "لیسانس",
+        "speciality": "نرم افزار",
+        "university": "آزاد",
+        "requestForJob": "فرانت اند",
+        "stateOfJob": "بیکار",
+        "historyJob": "ندارم",
+        "salary": "100000",
+        "uploadFiles": "یییی"
+      }
+    ],
+    [
+      {
+        "id": "1",
+        "name": "hadi",
+        "family": "farahmand",
+        "gender": "0",
+        "marride": "00",
+        "soldier": "در حال خدمت",
+        "birthdate": "1990-01-02",
+        "address": "تهران-شریعتی",
+        "email": "hadi@gmail.com",
+        "phoneNumber": "09141111111",
+        "degree": "لیسانس",
+        "speciality": "نرم افزار",
+        "university": "آزاد",
+        "requestForJob": "فرانت اند",
+        "stateOfJob": "بیکار",
+        "historyJob": "ندارم",
+        "salary": "100000",
+        "uploadFiles": "یییی"
+      }
+    ]
   ]
 }
