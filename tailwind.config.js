@@ -4,6 +4,8 @@ import { nextui } from "@nextui-org/react";
 
 import { fontFamily } from "tailwindcss/defaultTheme";
 import tailwindFormPlugin from "@tailwindcss/forms";
+import tailwindAspectRatio from "@tailwindcss/aspect-ratio";
+
 function withOpacity(variableName) {
   return ({ opacityValue }) => {
     if (opacityValue !== undefined) {
@@ -71,5 +73,6 @@ export default {
     tailwindFormPlugin({
       strategy: "class", // only generate classes
     }),
+    tailwindAspectRatio,
   ],
 };
