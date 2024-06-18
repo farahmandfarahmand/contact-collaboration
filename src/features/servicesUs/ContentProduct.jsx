@@ -1,11 +1,36 @@
+import {  useEffect, useState } from "react";
+
 function ContentProduct() {
+  // const [scrollPosition, setScrollPosition] = useState(0);
+ 
+  // const handleScroll = (e) => {
+  //     const { scrollTop, scrollHeight, clientHeight } = e.target;
+  //     const position = Math.ceil(
+  //         (scrollTop / (scrollHeight - clientHeight)) * 100
+  //     );
+  //     setScrollPosition(position);
+  // };
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
     return ( 
-        <section  className="bg-yellow-100   flex flex-col  sm:flex sm:flex-row ">
-        <div id="contentItem" className="">
-          <div className="mb-0 aspect-w-3 aspect-h-2">
-            <img className="object-cover" src="/images/content6.jpg" alt="" />
+        <section  className="bg-yellow-100  flex flex-col  md:grid md:grid-cols-2 ">
+          <div  className="bg-blue-100  md:w-3/4">
+            <img className="bg-gray-300 inline-block aspect-w-2 aspect-h-0 object-cover " src="/images/content8.png" alt="" />
           </div>
-          <div className="bg-pink-100 ">
+       
+          <div  id="contentItem" className="bg-pink-100  ">
             <h2 className="text-[2rem]  text-blue-700 font-semibold p-2 mt-2">
               تولید محتوا چیست؟
             </h2>
@@ -17,7 +42,7 @@ function ContentProduct() {
                 وب سایت، ارتباط با مشتریان، تبلیغات، آموزش و غیره به کار گرفته
                 شوند.
               </p>
-            </div>
+            
           </div>
         </div>
       </section>

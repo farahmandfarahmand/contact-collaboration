@@ -65,55 +65,55 @@ const data = [
 ];
 function Card() {
   return (
-    <div className="sm:m-2  ">
-      <div className="sm:absolute sm:z-0 sm:w-[50%] sm:h-[100%] md:w-[40%] md:h-[70%]  sm:border sm:border-primary-700"></div>
-      <div className="sm:z-[2]">
-      <div className="sm:items-center  sm:col-span-2 mt-8 md:col-span-3 ">
-        <span
-          data-aos="fade-up"
-          data-aos-delay="200"
-          data-aos-mirror="true"
-          data-aos-once="false"
-          data-aos-duration="1000"
-          className="mb-3 p-4 flex text-[0.85rem] font-bold rounded-sm sm:col-span-2 mt-8 md:col-span-3 "
-        >
-          <LiaToolsSolid
-            color="orange"
-            className="sm:h-6 sm:w-6 w-8 h-8 ml-4 animate-pulse"
-          />
-          <h1 className="text-[1rem] "> ابزارهای مناسب طراحی سایت</h1>
-        </span>
-      </div>
-
-      <div className="flex  flex-col gap-4 sm:grid sm:grid-cols-2 sm:gap-2 md:gap-4 md:grid md:grid-cols-3">
-        {data.map((item) => (
-          <div
-            key={data.id}
-            data-aos={item.dataAos}
-            // data-aos-anchor={item.dataAnchor}
-            data-aos-offset="200"
-            data-aos-delay="50"
+    <div className="sm:m-2  relative">
+      <div className="absolute z-0 top-0 right-20 left-20 -bottom-10 rounded-lg  sm:border-2 sm:border-primary-100"></div>
+     <div className="z-[2]">
+        <div className="w-full flex  justify-center   sm:col-span-2 mt-8 md:col-span-3 ">
+          <span
+            data-aos="fade-up"
+            data-aos-delay="200"
             data-aos-mirror="true"
             data-aos-once="false"
             data-aos-duration="1000"
-            className="overflow-hidden sm:z-[100] h-50 sm:h-44 flex flex-col items-center rounded-lg shadow-xl hover:border-1 hover:border-primary-900 "
+            className="mb-3 p-4 flex text-[0.85rem] font-bold rounded-sm sm:col-span-2 mt-8 md:col-span-3 "
           >
-            <div className=" pt-0 h-full flex flex-col gap-2 p-2 items-center w-full ">
-              <div className="bg-primary-800 h-10 rounded-b-xl w-[95%] sm:w-[96%] md:[100%] flex items-center justify-center md:justify-items-start  p-3">
-                <div className="w-5 h-5 text-white ">{item.icon}</div>
-                <p className="text-[0.75rem] font-bold mr-2 text-white">
-                  {item.title}
+            <LiaToolsSolid
+              color="orange"
+              className="sm:h-6 sm:w-6 w-8 h-8 ml-4 animate-pulse"
+            />
+            <h1 className="text-[1rem] "> ابزارهای مناسب طراحی سایت</h1>
+          </span>
+        </div>
+
+        <div className="flex sm:z-50 flex-col gap-4 sm:grid sm:grid-cols-2 sm:gap-2 md:gap-4 md:grid md:grid-cols-3">
+          {data.map((item) => (
+            <div
+              key={data.id}
+              data-aos={item.dataAos}
+              // data-aos-anchor={item.dataAnchor}
+              data-aos-offset="200"
+              data-aos-delay="50"
+              data-aos-mirror="true"
+              data-aos-once="false"
+              data-aos-duration="1000"
+              className="bg-white overflow-hidden sm:z-[100] h-50 sm:h-44 flex flex-col items-center rounded-lg shadow-xl hover:border-1 hover:border-primary-900 "
+            >
+              <div className=" pt-0 h-full flex flex-col gap-2 p-2 items-center w-full ">
+                <div className="bg-primary-800 h-10 rounded-b-xl w-[95%] sm:w-[96%] md:[100%] flex items-center justify-center md:justify-items-start  p-3">
+                  <div className="w-5 h-5 text-white ">{item.icon}</div>
+                  <p className="text-[0.75rem] sm:text-[0.85rem]  font-bold mr-2 text-white">
+                    {item.title}
+                  </p>
+                </div>
+                <p className="text-[0.75rem] sm:text-[0.85rem] w-full h-full text-gray-600 text-justify ">
+                  {item.descrip}
                 </p>
               </div>
-              <p className="text-[0.65rem] w-full h-full text-gray-600 text-justify ">
-                {item.descrip}
-              </p>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
       </div>
-    </div>
   );
 }
 

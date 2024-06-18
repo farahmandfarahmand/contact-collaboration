@@ -84,11 +84,28 @@
     @apply bg-gray-50  m-1  w-full py-1  px-4 block border-solid border-2 border-gray-300
       shadow-sm hover:shadow-md  focus:shadow-lg focus:shadow-primary-200 text-gray-400 rounded-lg 
     transition-all duration-300 ease-out focus:border-primary-500 focus:ring-primary-500
-     text-[0.85rem] sm:text-[1rem] 
- 
+     text-[0.85rem] sm:text-[1rem];
+  }
+
+  .animationImg {
+    position: relative;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-direction: alternate-reverse;
+    /* animation-delay: -1s; */
+    /* animation-iteration-count: 2; */
+  }
+  @keyframes example {
+    0% {
+      left: 0px;
+      top: 0px;
+    }
+    50% {
+      left: 200px;
+      top: 0px;
+    }
   }
 }
-
 
 html,
 body {

@@ -7,12 +7,13 @@ import Card from "../../ui/Card";
 import SeoSite from "./SeoSite";
 import ServiceItems from "./ServiceItems";
 import ContentProduct from "./ContentProduct";
+import BackToTopButton from "../../ui/BackToTopButton";
 
 // ..
 AOS.init();
 function ServicesUsList() {
   return (
-    <div className=" m-24 items-center  ">
+    <div className="  items-center  ">
       <div className="bg-blue-50 w-full h-full pb-3">
         <div className=" bg-blue-700  border-b-1 border-blue-200 sm:bg-white sm:grid sm:grid-cols-2">
           <div className="bg-blue-700  sm:pr-2 sm:z-10 sm:[clip-path:polygon(20%_0%,_100%_0%,_100%_100%,_0%_100%)]  flex  flex-col  justify-center ">
@@ -64,6 +65,7 @@ function ServicesUsList() {
 
       <SeoSite />
       <ContentProduct />
+      <BackToTopButton/>
     </div>
   );
 }

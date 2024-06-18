@@ -58,13 +58,20 @@ const dataSeoItem = [
 function SeoSite() {
   return (
     <section id="seoItem"
-      className="sm:bg-white sm:w-[90%]  items-center mt-20 gap-4  md:relative
+      className="sm:bg-white sm:w-[90%]  items-center  mt-20 gap-4  md:relative
        rounded-xl  mb-20  flex flex-col  md:grid   md:grid-cols-3 md:gap-x-10"
     >
-      <div className=" md:col-span-3 ">
-      <div className=" w-[18rem] h-[17rem] flex  md:absolute -bottom-10  top-0 -left-20 ">
+      <div className="  md:col-span-3 ">
+      <div
+       data-aos="fade-right"
+       data-aos-delay="200"
+       data-aos-mirror="true"
+       data-aos-once="false"
+       data-aos-duration="1000"
+      className="  w-[18rem] h-[17rem] flex  md:absolute -bottom-10  top-0 -left-20 ">
         <div
-          className=" w-[16rem] h-[13rem] rotate-0 hover:rotate-2
+        
+          className="animationImg w-[16rem] h-[13rem] rotate-0 hover:rotate-2
            duration-500 hover:-translate-z-1 -mr-52   mt-8   translate-x-16
              aspect-w-2 aspect-h-1 order-2  [clip-path:polygon(20%_0%,_97%_0%,_83%_100%,_0%_100%)] "
         
