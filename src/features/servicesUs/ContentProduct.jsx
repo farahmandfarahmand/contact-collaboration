@@ -1,11 +1,11 @@
 function ContentProduct() {
     return ( 
-        <section  className="bg-yellow-100  aspect-w-3 aspect-h-2 flex flex-col  sm:flex sm:flex-row ">
+        <section  className="bg-yellow-100   flex flex-col  sm:flex sm:flex-row ">
         <div id="contentItem" className="">
-          <div className="mb-0 ">
+          <div className="mb-0 aspect-w-3 aspect-h-2">
             <img className="object-cover" src="/images/content6.jpg" alt="" />
           </div>
-          <div className="bg-pink-100 sm:order-2">
+          <div className="bg-pink-100 ">
             <h2 className="text-[2rem]  text-blue-700 font-semibold p-2 mt-2">
               تولید محتوا چیست؟
             </h2>

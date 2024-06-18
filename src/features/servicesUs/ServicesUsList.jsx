@@ -28,12 +28,16 @@ function ServicesUsList() {
             </p>
             <p className="text-white p-2 text-md sm:text-lg"> </p>
           </div>
-          <div className="ml-8 sm:ml-0 sm:-mr-24 sm:z-0 sm:aspect-w-3 sm:aspect-h-2  border-white  flex  items-center justify-center ">
+          <div className="relative ml-8 sm:ml-0 sm:-mr-24 sm:z-0 sm:aspect-w-3 sm:aspect-h-2  border-white  flex  items-center justify-center ">
             <img
-              className="sm:object-cover  rounded-tl-md  sm:rounded-none "
+              className="sm:object-cover rounded-tl-md  sm:rounded-none "
               src="/images/service5.jpg"
               alt=""
             />
+            <div className="absolute bottom-1 -left-5 ">
+
+            <img src="/public/images/flower1.PNG" alt=""  className="animate-pulse w-[5rem] h-[5rem] object-contain "/>
+            </div>
           </div>
         </div>
       </div>
