@@ -8,6 +8,7 @@ import SeoSite from "./SeoSite";
 import ServiceItems from "./ServiceItems";
 import ContentProduct from "./ContentProduct";
 import BackToTopButton from "../../ui/BackToTopButton";
+import DomainHost from "./DomainHost";
 
 // ..
 AOS.init();
@@ -35,10 +36,10 @@ function ServicesUsList() {
               src="/images/service5.jpg"
               alt=""
             />
-            <div className="absolute bottom-1 -left-5 ">
+            {/* <div className="absolute bottom-10 bg-blend-multiply  opacity-40 left-[5.5rem]  ">
 
-            <img src="/public/images/flower1.PNG" alt=""  className="animate-pulse w-[5rem] h-[5rem] object-contain "/>
-            </div>
+            <img src="/public/images/flower2.PNG" alt=""  className="animate-pulse w-[2.2rem] h-[3rem] object-contain "/>
+            </div> */}
           </div>
         </div>
       </div>
@@ -65,6 +66,7 @@ function ServicesUsList() {
 
       <SeoSite />
       <ContentProduct />
+      <DomainHost/>
       <BackToTopButton/>
     </div>
   );

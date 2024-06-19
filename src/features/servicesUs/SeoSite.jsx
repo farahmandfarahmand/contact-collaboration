@@ -93,7 +93,7 @@ function SeoSite() {
         data-aos-mirror="true"
         data-aos-once="true"
         data-aos-duration="1000"
-        className="text-[2rem]  text-blue-700 text-justify font-semibold p-2 mt-2">
+        className="text-[2rem] text-blue-700 text-justify font-semibold p-2 mt-2">
           سئو سایت
         </h1>
         <p className="text-md p-2 text-justify indent-4 w-full ">

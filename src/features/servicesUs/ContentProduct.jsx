@@ -25,7 +25,7 @@ function ContentProduct() {
   }, []);
 
     return ( 
-        <section  className="bg-yellow-100  flex flex-col  md:grid md:grid-cols-2 ">
+        <section  className="bg-yellow-100 mb-20 flex flex-col  md:grid md:grid-cols-2 ">
           <div  className="bg-blue-100  md:w-3/4">
             <img className="bg-gray-300 inline-block aspect-w-2 aspect-h-0 object-cover " src="/images/content8.png" alt="" />
           </div>
