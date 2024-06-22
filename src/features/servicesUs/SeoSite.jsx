@@ -57,11 +57,11 @@ const dataSeoItem = [
 // !-------------------------------------------------------
 function SeoSite() {
   return (
-    <section id="seoItem"
+    <section id="seoItem "
       className="sm:bg-white sm:w-[90%]  items-center  mt-20 gap-4  md:relative
        rounded-xl  mb-20  flex flex-col  md:grid   md:grid-cols-3 md:gap-x-10"
     >
-      <div className="  md:col-span-3 ">
+      <div className=" md:block md:col-span-3 flex flex-col items-center ">
       <div
        data-aos="fade-right"
        data-aos-delay="200"
@@ -110,7 +110,7 @@ function SeoSite() {
       </div>
       <div className="col-span-3 ">
         <h3 className="p-2 font-semibold text-gray-600 text-[0.95rem]">عوامل موثر در سئو سایت</h3>
-        <div className="flex flex-wrap gap-2 items-center group text-center  cursor-pointer font-semibold text-[0.75rem] ">
+        <div className="flex flex-wrap gap-2 items-center justify-center group text-center  cursor-pointer font-semibold text-[0.75rem] ">
           {dataSeoItem.map((item) => (
             <div
               key={item.id}

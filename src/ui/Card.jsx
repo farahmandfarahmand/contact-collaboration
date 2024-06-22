@@ -65,8 +65,8 @@ const data = [
 ];
 function Card() {
   return (
-    <div className="sm:m-2  relative">
-      <div className="absolute z-0 top-0 right-20 left-20 -bottom-10 rounded-lg  sm:border-2 sm:border-primary-100"></div>
+    <div className="sm:m-2  relative ">
+      <div className="absolute  z-0 top-0 right-20 left-20 -bottom-10 rounded-lg  sm:border-2 sm:border-primary-100"></div>
      <div className="z-[2]">
         <div className="w-full flex  justify-center   sm:col-span-2 mt-8 md:col-span-3 ">
           <span

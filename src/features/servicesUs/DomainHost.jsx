@@ -1,6 +1,6 @@
 function DomainHost() {
   return (
-    <div id="domainItem" className="relative flex flex-col items-center bg-white sm:bg-gray-50">
+    <div id="domainItem" className="relative mb-20 flex flex-col items-center bg-white sm:bg-gray-50">
       <h1 
        data-aos="zoom-out"
        data-aos-delay="200"
@@ -22,7 +22,7 @@ function DomainHost() {
         >
           <img
             className="object-cover"
-            src="/public/images/domain2.png"
+            src="/images/domain2.png"
             alt=""
           />
         </div>
@@ -48,10 +48,10 @@ function DomainHost() {
           </ol>
         </div>
         {/* ----------------host section--------------------- */}
-        <div className="bg-primary-200  opacity-75 sm:absolute sm:top-[8.5rem] sm:w-[22.5rem] sm:h-[18rem] md:right-[23rem] sm:right-[19rem] sm:z-30 lg:w-[31rem] lg:right-[31rem]">
-          <div className="hidden sm:block bg-no-repeat bg-cover bg-[url('/public/images/domain2.png')] h-[230px] w-[230px] opacity-15 -z-10 left-0 bottom-0 absolute"></div>
+        <div className="bg-primary-200  opacity-75 sm:absolute sm:top-[8.5rem]  sm:h-[18rem] md:right-[23rem] sm:right-[19rem] sm:z-30 lg:w-[31rem] lg:right-[31rem]">
+          <div className="hidden w-full md:w-[20rem] aspect-w-2 aspect-h-1 sm:block bg-no-repeat bg-cover bg-[url('/public/images/domain2-removebg.png')] h-full   opacity-15 -z-10 left-0 bottom-0 absolute"></div>
           <h2 className=" text-[1.2rem] pr-4 pt-2 font-bold  ">هاست</h2>
-          <p className="p-4 text-[0.8rem]">
+          <p className="p-4 text-[0.8rem] ">
             برای داشتن یک وب سایت روی بستر اینترنت بعد از ثبت دامنه باید سراغ
             تهیه هاست بروید. برای این منظور شما می توانید از شرکت های ارایه
             دهنده خدمات هاستینگ، هاست مناسب خود را تهیه نمایید. این شرکت ها

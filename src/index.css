@@ -105,6 +105,31 @@
       top: 0px;
     }
   }
+  .parallax {
+    /* The image used */
+    background-image: url("digital1.png");
+   
+    /* Set a specific height */
+    min-height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #scrollPosition{
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    background-image:url('digital1.png') ;
+    background-size: 100%;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
 }
 
 html,

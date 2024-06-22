@@ -9,6 +9,8 @@ import ServiceItems from "./ServiceItems";
 import ContentProduct from "./ContentProduct";
 import BackToTopButton from "../../ui/BackToTopButton";
 import DomainHost from "./DomainHost";
+import DigitalMarketing from "./DigitalMarketing";
+import StepsDesign from "./StepsDesign";
 
 // ..
 AOS.init();
@@ -49,7 +51,7 @@ function ServicesUsList() {
         <Card />
       </div>
       <div></div>
-      <div className="flex bg-white gap-4 items-center mt-10 p-4">
+      <div className="flex bg-white gap-4 items-center mt-20 p-4">
         <BsStars
           color="orange"
           className="sm:w-10 sm:h-20 w-20 h-16 mr-2 animate-pulse"
@@ -57,17 +59,19 @@ function ServicesUsList() {
         <h2 className="text-[1.1rem]  text-blue-700 text-justify font-semibold p-2 mt-2">
           الویت تیم ما رضایت مشتریان و رعایت اصول استاندارد در طراحی است
         </h2>
-        <div className="flex items-center  ">
+        {/* <div className="flex items-center  ">
           <div className="w-20 h-20  flex  -ml-8  items-center justify-center rounded-full cursor-pointer bg-red-400 border-2 border-white"></div>
           <div className="w-20 h-20   flex   -ml-8   items-center justify-center rounded-full cursor-pointer bg-red-400 border-2 border-white"></div>
           <div className="w-20 h-20   flex     items-center justify-center rounded-full cursor-pointer bg-red-400 border-2 border-white"></div>
-        </div>
+        </div> */}
       </div>
 
       <SeoSite />
       <ContentProduct />
       <DomainHost/>
+      <DigitalMarketing/>
       <BackToTopButton/>
+      <StepsDesign/>
     </div>
   );
 }
