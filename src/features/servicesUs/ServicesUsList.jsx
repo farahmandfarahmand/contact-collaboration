@@ -18,8 +18,8 @@ function ServicesUsList() {
   return (
     <div className="  items-center  ">
       <div className="bg-blue-50 w-full h-full pb-3">
-        <div className=" bg-blue-700  border-b-1 border-blue-200 sm:bg-white sm:grid sm:grid-cols-2">
-          <div className="bg-blue-700  sm:pr-2 sm:z-10 sm:[clip-path:polygon(20%_0%,_100%_0%,_100%_100%,_0%_100%)]  flex  flex-col  justify-center ">
+        <div className=" bg-[#274472]  border-b-1 border-blue-200 sm:bg-white sm:grid sm:grid-cols-2">
+          <div className="bg-[#274472]  sm:pr-2 sm:z-10 sm:[clip-path:polygon(20%_0%,_100%_0%,_100%_100%,_0%_100%)]  flex  flex-col  justify-center ">
             <div className="flex items-center p-1">
               <BsStars color="white" className="w-5 h-5" />
               <h2 className=" text-xl sm:ml-5 text-white font-semibold p-2 mt-2 mb-1 ">
@@ -56,7 +56,7 @@ function ServicesUsList() {
           color="orange"
           className="sm:w-10 sm:h-20 w-20 h-16 mr-2 animate-pulse"
         />
-        <h2 className="text-[1.1rem]  text-blue-700 text-justify font-semibold p-2 mt-2">
+        <h2 className="text-[1.1rem]  text-[#145DA0] text-justify font-semibold p-2 mt-2">
           الویت تیم ما رضایت مشتریان و رعایت اصول استاندارد در طراحی است
         </h2>
         {/* <div className="flex items-center  ">

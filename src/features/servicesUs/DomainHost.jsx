@@ -8,7 +8,7 @@ function DomainHost() {
        data-aos-mirror="true"
        data-aos-once="false"
        data-aos-duration="1000"
-       className=" ml-20 p-4 text-[2rem]   font-semibold">دامنه و هاست</h1>
+       className=" ml-20 p-4 text-[2rem] text-[#145DA0]  font-semibold">دامنه و هاست</h1>
 
       <div className="sm:grid sm:items-center sm:grid-cols-2 sm: sm:h-[60%] ">
         <div
@@ -28,7 +28,7 @@ function DomainHost() {
         </div>
         {/* ---------------- domain section------------------ */}
         <div
-          className="bg-primary-700 mix-blend-multiply mt-8 z-10 text-white rounded-t-3xl sm:rounded-l-3xl [clip-path:polygon(0%_15%,_100%_0%,_100%_100%,_0%_100%)] 
+          className="bg-[#2E8BC0] mix-blend-multiply mt-8 z-10 text-white rounded-t-3xl sm:rounded-l-3xl [clip-path:polygon(0%_15%,_100%_0%,_100%_100%,_0%_100%)] 
         sm:[clip-path:polygon(0%_0%,_100%_10%,_100%_87%,_0%_100%)] sm:h-[21rem]   "
         >
           <h2 className=" text-[1.2rem] p-4 font-bold sm:text-end sm:mt-5 ">
@@ -48,7 +48,7 @@ function DomainHost() {
           </ol>
         </div>
         {/* ----------------host section--------------------- */}
-        <div className="bg-primary-200  opacity-75 sm:absolute sm:top-[8.5rem]  sm:h-[18rem] md:right-[23rem] sm:right-[19rem] sm:z-30 lg:w-[31rem] lg:right-[31rem]">
+        <div className="bg-[#B1D4E0]  opacity-75 sm:absolute sm:top-[8.5rem]  sm:h-[18rem] md:right-[23rem] sm:right-[19rem] sm:z-30 lg:w-[31rem] lg:right-[31rem]">
           <div className="hidden w-full md:w-[20rem] aspect-w-2 aspect-h-1 sm:block bg-no-repeat bg-cover bg-[url('/public/images/domain2-removebg.png')] h-full   opacity-15 -z-10 left-0 bottom-0 absolute"></div>
           <h2 className=" text-[1.2rem] pr-4 pt-2 font-bold  ">هاست</h2>
           <p className="p-4 text-[0.8rem] ">

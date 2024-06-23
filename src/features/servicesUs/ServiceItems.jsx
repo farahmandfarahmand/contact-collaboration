@@ -12,7 +12,7 @@ const dataServiceItem = [
     id: "1",
     title: "   سئو سایت  ",
 
-    icon: <RiSeoLine color="orange" className=" w-12 h-12" />,
+    icon: <RiSeoLine color="#E87A00" className=" w-12 h-12" />,
     toScrollLink: "seoItem",
     // dataAnchor:"top-center"
   },
@@ -20,28 +20,28 @@ const dataServiceItem = [
     id: "2",
     title: "    تولید محتوا  ",
 
-    icon: <RiProductHuntLine color="orange" className="  w-12 h-12 " />,
+    icon: <RiProductHuntLine color="#E87A00" className="  w-12 h-12 " />,
     toScrollLink: "contentItem",
     // dataAnchor:"top-center"
   },
   {
     id: "3",
     title: "   دامنه و سرور   ",
-    icon: <RiGlobalLine color="orange" className="  w-12 h-12 " />,
+    icon: <RiGlobalLine color="#E87A00" className="  w-12 h-12 " />,
     toScrollLink: "domainItem",
     // dataAnchor:"top-center"
   },
   {
     id: "4",
     title: "   دیجیتال مارکتینگ ",
-    icon: <FaDigitalTachograph color="orange" className="   w-12 h-12 " />,
+    icon: <FaDigitalTachograph color="#E87A00" className="   w-12 h-12 " />,
     toScrollLink: "digitalItem",
     // dataAnchor:"top-center"
   },
   {
     id: "5",
     title: "   مراحل طراحی سایت  ",
-    icon: <CgWebsite color="orange" className="   w-12 h-12 " />,
+    icon: <CgWebsite color="#E87A00" className="   w-12 h-12 " />,
     toScrollLink: "designItem",
     // dataAnchor:"top-center"
   },
@@ -76,7 +76,7 @@ function ServiceItems() {
             duration={500}
             to={item.toScrollLink}
             key={item.id}
-            className="shadow group  items-center hover:scale-125 text-[0.85rem] hover:text-[0.75rem]  bg-white flex flex-col rounded-xl w-32 h-32 "
+            className="shadow group  items-center hover:scale-125   text-[0.85rem] hover:text-[0.75rem]  bg-white flex flex-col rounded-xl w-32 h-32 "
           >
             <div className=" m-3 group-hover:-scale-x-95 group-hover:duration-700">
               {item.icon}

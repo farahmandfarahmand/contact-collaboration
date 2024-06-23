@@ -10,7 +10,7 @@ const dataSeoItem = [
     id: "1",
     title: "محتوای با کیفیت",
 
-    icon: <BiSolidBookContent className="w-8 h-8 sm:w-6 sm:h-6" color="orange" />,
+    icon: <BiSolidBookContent className="w-8 h-8 sm:w-6 sm:h-6" color="#E87A00" />,
 
     // dataAnchor:"center-bottom"
   },
@@ -18,7 +18,7 @@ const dataSeoItem = [
     id: "2",
     title: " لینک های خارجی و داخلی ",
 
-    icon: <LuArrowLeftRight className="w-8 h-8 sm:w-6 sm:h-6" color="orange" />,
+    icon: <LuArrowLeftRight className="w-8 h-8 sm:w-6 sm:h-6" color="#E87A00" />,
 
     // dataAnchor:"center-bottom"
   },
@@ -26,7 +26,7 @@ const dataSeoItem = [
     id: "3",
     title: " بهبود ترافیک و سرعت سایت ",
 
-    icon: <FaTrafficLight className="w-8 h-8 sm:w-6 sm:h-6" color="orange" />,
+    icon: <FaTrafficLight className="w-8 h-8 sm:w-6 sm:h-6" color="#E87A00" />,
 
     // dataAnchor:"center-bottom"
   },
@@ -34,14 +34,14 @@ const dataSeoItem = [
     id: "4",
     title: "کدنویسی استاندارد صفحات",
 
-    icon: <IoCodeWorkingSharp className="w-8 h-8 sm:w-6 sm:h-6" color="orange" />,
+    icon: <IoCodeWorkingSharp className="w-8 h-8 sm:w-6 sm:h-6" color="#E87A00" />,
 
     // dataAnchor:"center-bottom"
   },
   {
     id: "5",
     title: " فعالیت در شبکه های اجتماعی",
-    icon: <MdOutlinePublic className="w-8 h-8 sm:w-6 sm:h-6" color="orange" />,
+    icon: <MdOutlinePublic className="w-8 h-8 sm:w-6 sm:h-6" color="#E87A00" />,
 
     // dataAnchor:"center-bottom"
   },
@@ -49,7 +49,7 @@ const dataSeoItem = [
     id: "6",
     title: " عناوین، تگ‌ها و ساختار آدرس‌‌ها ",
 
-    icon: <SiCodefactor className="w-8 h-8 sm:w-6 sm:h-6 " color="orange" />,
+    icon: <SiCodefactor className="w-8 h-8 sm:w-6 sm:h-6 " color="#E87A00" />,
 
     // dataAnchor:"center-bottom"
   },
@@ -82,7 +82,7 @@ function SeoSite() {
             alt=""
           />
         </div>
-        <div className="w-full h-full  bg-blue-700  transition-all duration-500 [clip-path:polygon(20%_0%,_97%_0%,_80%_100%,_0%_100%)] "></div>
+        <div className="w-full h-full  bg-[#274472]  transition-all duration-500 [clip-path:polygon(20%_0%,_97%_0%,_80%_100%,_0%_100%)] "></div>
       </div>
 
       <div className=" rounded-lg md:w-[55%] md:col-span-2">
@@ -93,7 +93,7 @@ function SeoSite() {
         data-aos-mirror="true"
         data-aos-once="true"
         data-aos-duration="1000"
-        className="text-[2rem] text-blue-700 text-justify font-semibold p-2 mt-2">
+        className="text-[2rem] text-[#145DA0] text-justify font-semibold p-2 mt-2">
           سئو سایت
         </h1>
         <p className="text-md p-2 text-justify indent-4 w-full ">
@@ -117,7 +117,7 @@ function SeoSite() {
               className="sm:w-28 sm:h-28 w-44 h-44 sm:group-hover:m-[0.15rem]  flex flex-col  sm:-ml-6 mb-2 items-center justify-center rounded-lg
                bg-gray-50 border-4 border-white shadow-lg sm:mb-2 "
             >
-              <span className="w-6 h-6 mb-5" color="orange">
+              <span className="w-6 h-6 mb-5" color="#E87A00">
                 {item.icon}{" "}
               </span>
               <p className="text-gray-600">{item.title}</p>

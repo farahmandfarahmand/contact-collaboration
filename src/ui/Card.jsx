@@ -78,7 +78,7 @@ function Card() {
             className="mb-3 p-4 flex text-[0.85rem] font-bold rounded-sm sm:col-span-2 mt-8 md:col-span-3 "
           >
             <LiaToolsSolid
-              color="orange"
+              color="#E87A00"
               className="sm:h-6 sm:w-6 w-8 h-8 ml-4 animate-pulse"
             />
             <h1 className="text-[1rem] "> ابزارهای مناسب طراحی سایت</h1>
@@ -99,7 +99,7 @@ function Card() {
               className="bg-white overflow-hidden sm:z-[100] h-50 sm:h-44 flex flex-col items-center rounded-lg shadow-xl hover:border-1 hover:border-primary-900 "
             >
               <div className=" pt-0 h-full flex flex-col gap-2 p-2 items-center w-full ">
-                <div className="bg-primary-800 h-10 rounded-b-xl w-[95%] sm:w-[96%] md:[100%] flex items-center justify-center md:justify-items-start  p-3">
+                <div className="bg-[#145DA0] h-10 rounded-b-xl w-[95%] sm:w-[96%] md:[100%] flex items-center justify-center md:justify-items-start  p-3">
                   <div className="w-5 h-5 text-white ">{item.icon}</div>
                   <p className="text-[0.75rem] sm:text-[0.85rem]  font-bold mr-2 text-white">
                     {item.title}

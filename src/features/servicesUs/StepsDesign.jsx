@@ -25,6 +25,14 @@ const dataStepsDesign = [
     description:
       "در نهایت برنامه‌نویسای ما طرح گرافیکی مورد تایید شما را به یک وب سایت واقعی تبدیل خواهند کرد. کار کدنویسی به بهینه ترین شکل ممکن انجام می‌شود.  ",
   },
+  {
+    id: "4",
+    title: "    آموزش و پشتیبانی  ",
+
+    pic: "/public/images/stepDesign4.gif",
+    description:
+      "  ما نحوه مدیریت وب سایت را به شما آموزش می‌دهیم و پاسخگوی سوالات شما هستیم.  ",
+  },
 ];
 // !-----------------------------------------
 function StepsDesign() {
@@ -35,16 +43,16 @@ function StepsDesign() {
           مراحل طراحی سایت
         </h1>
         <p className="text-[1rem] text-center text-gray-500">
-          طراحی وب سایت شما را در 3 مرحله انجام خواهیم داد
+          طراحی وب سایت شما را د 4 مرحله انجام خواهیم داد
         </p>
       </div>
-      <div className=" flex bg-blue-300  flex-wrap justify-center  items-center  sm:justify-around   ">
+      <div className=" flex   flex-wrap justify-center  items-center  sm:justify-around   ">
         {dataStepsDesign.map((item) => (
           <div
             key={item.id}
-            className=" w-4/5 bg-green-200 sm:w-2/5 md:w-1/5 flex flex-col items-center"
+            className=" w-4/5 h-[22rem]  sm:w-2/5 md:w-1/5 flex flex-col items-center"
           >
-            <img className=" bg-red-200  " src={item.pic} alt="" />
+            <img className="   " src={item.pic} alt="" />
             <h1 className=" text-center text-[1rem] font-bold">{item.title}</h1>
             <p className="text-center p-2 leading-6 text-[0.75rem] text-gray-500">
               {item.description}

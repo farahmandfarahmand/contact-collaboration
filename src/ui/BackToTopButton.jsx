@@ -23,7 +23,7 @@ function BackToTopButton() {
       {backToTopButton && (
         <button
           onClick={scrollUp}
-          className="flex items-center justify-center shadow-xl rounded-full  bg-primary-800 font-bold w-[45px] h-[45px]"
+          className="flex items-center justify-center shadow-xl rounded-full  bg-[#145DA0] font-bold w-[45px] h-[45px]"
         >
           <FaArrowUp className="w-6 h-6" color="white" />
         </button>

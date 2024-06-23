@@ -5,6 +5,7 @@ import { PiVideoLight } from "react-icons/pi";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { TbNetwork } from "react-icons/tb";
 
+
 const dataDigitalApproch = [
   {
     id: "1",
@@ -59,6 +60,7 @@ const dataDigitalApproch = [
 ];
 
 function DigitalMarketing() {
+
   return (
     <div id="digitalItem" className=" mb-20 items-center">
       <div className="rounded-2xl  bg-[url('/public/images/digital5.png')]  max-w-full overflow-y-scroll bg-content bg-fixed bg-center bg-no-repeat shadow-lg">
@@ -70,7 +72,7 @@ function DigitalMarketing() {
             data-aos-mirror="true"
             data-aos-once="false"
             data-aos-duration="1000"
-            className="text-[1.5rem] mr-5 mt-16 text-black"
+            className="text-[1.5rem] mr-5 mt-16 text-[#0C2D48] font-bold"
           >
             {" "}
             دیجیتال مارکتینگ
@@ -82,13 +84,13 @@ function DigitalMarketing() {
             data-aos-mirror="true"
             data-aos-once="false"
             data-aos-duration="1000"
-            className="text-[2rem] mr-5 font-semibold mt-10 text-black"
+            className="text-[2rem] mr-5 font-semibold mt-10 text-[#0C2D48]"
           >
             بازاریابی و تبلیغات اینترنتی
           </h1>
         </div>
         <div className="mt-40">
-          <div className="bg-blue-400 text-[1rem] p-4">
+          <div className="bg-[#145DA0] text-[1rem] p-4">
             <div className="font-inter  text-white  ">
               دیجیتال مارکتینگ به گونه‌­ای از بازاریابی محصولات و خدمات
               می­‌گویند که از طریق دستگاه‌­های الکترونیکی در حوزه اینترنت انجام
@@ -135,7 +137,7 @@ function DigitalMarketing() {
                 item.id == 2 || item.id == 5 ? (
                   <div
                     key={item.id}
-                    className=" md:w-40 md:h-40  md:mr-[15%] sm:w-1/5  w-2/5 items-center text-gray-500  hover:scale-125 hover:bg-blue-800 hover:text-white hover:translate-4 flex flex-col gap-x-2 rounded-md  bg-blue-100 text-center "
+                    className=" md:w-40 md:h-40  md:mr-[15%] sm:w-1/5  w-2/5 items-center text-gray-500  hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4 flex flex-col gap-x-2 rounded-md  bg-[#B1D4E0] text-center "
                   >
                     <div className="  w-10 h-8 mt-3 ">{item.icon}</div>
                     <div className=" w-32 h-6 text-[0.85rem] font-semibold ">
@@ -148,7 +150,7 @@ function DigitalMarketing() {
                 ) : (
                   <div
                     key={item.id}
-                    className="md:w-40 md:h-40 md:-mt-8 md:gap-x-2 md:mr-[15%]  w-2/5 items-center text-gray-500 hover:text-white hover:scale-125 hover:bg-blue-800  hover:translate-4 flex flex-col gap-x-2 rounded-md  bg-blue-100 text-center "
+                    className="md:w-40 md:h-40 md:-mt-8 md:gap-x-2 md:mr-[15%]  w-2/5 items-center text-gray-500 hover:text-white hover:scale-125 hover:bg-[#2E8BC0]  hover:translate-4 flex flex-col gap-x-2 rounded-md  bg-[#B1D4E0] text-center "
                   >
                     <div className="  w-10 h-8 mt-3 ">{item.icon}</div>
                     <div className=" w-32 h-6 text-[0.85rem] font-semibold  ">
