@@ -131,12 +131,12 @@ function DigitalMarketing() {
                 باید بدانید که از کدام کانال بازاریابی دیجیتال استفاده کنید.
               </p>
             </div>
-<div className="bg-pink-100  flex flex-col  gap-y-20 items-center  ">
+<div className="bg-pink-100 w-full flex flex-col  gap-y-20 items-center  ">
 <div className="bg-green-300  sm:flex sm:flex-wrap sm:gap-4 ">
 
-{dataDigitalApproch.map((item) =>
+{/* {dataDigitalApproch.map((item) =>
                 item.id == 2 || item.id == 5 ? (
-                  <div key={item.id} className=" w-2/5  items-center text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4  rounded-md flex flex-col gap-x-2   bg-[#B1D4E0] text-center">
+                  <div key={item.id} className=" w-2/5  items-center text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4  rounded-md flex flex-col gap-2   bg-[#B1D4E0] text-center">
                     <div className="  w-10 h-8 mt-5 ">{item.icon}</div>
                     <div className=" w-32 h-6 text-[0.85rem] font-semibold ">
                       {item.title}
@@ -148,7 +148,7 @@ function DigitalMarketing() {
                 ) : (
                   <div
                     key={item.id}
-                    className=" w-2/5 items-center text-gray-500 hover:text-white hover:scale-125 hover:bg-[#2E8BC0]  hover:translate-4 flex flex-col gap-x-2 rounded-md  bg-[#B1D4E0] text-center "
+                    className=" w-2/5 items-center text-gray-500 hover:text-white hover:scale-125 hover:bg-[#2E8BC0]  hover:translate-4 flex flex-col gap-2 rounded-md  bg-[#B1D4E0] text-center "
                   >
                     <div className="  w-10 h-8 mt-5 ">{item.icon}</div>
                     <div className=" w-32 h-6 text-[0.85rem] font-semibold  ">
@@ -159,13 +159,13 @@ function DigitalMarketing() {
                     </div>
                   </div>
                 )
-              )}
+              )} */}
 
-{/* <div className=" w-2/5 items-center text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4   rounded-md flex flex-col gap-x-2  bg-[#B1D4E0] text-center">ghhj</div>
-<div className=" w-2/5 items-center text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4  rounded-md flex flex-col gap-x-2  bg-[#B1D4E0] text-center">ghhj</div>
-<div className=" w-2/5 items-center text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4  rounded-md flex flex-col gap-x-2  bg-[#B1D4E0] text-center">ghhj</div>
-<div className=" w-2/5 items-center text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4  rounded-md flex flex-col gap-x-2  bg-[#B1D4E0] text-center">ghhj</div>
-<div className=" w-2/5 items-center text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4  rounded-md flex flex-col gap-x-2  bg-[#B1D4E0] text-center">ghhj</div> */}
+<div className=" w-2/5 items-center text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4   rounded-md flex flex-col gap-2  bg-[#B1D4E0] text-center">ghhj</div>
+<div className=" w-2/5 items-center text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4  rounded-md flex flex-col gap-2  bg-[#B1D4E0] text-center">ghhj</div>
+<div className=" w-2/5 items-center text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4  rounded-md flex flex-col gap-2  bg-[#B1D4E0] text-center">ghhj</div>
+<div className=" w-2/5 items-center text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4  rounded-md flex flex-col gap-2  bg-[#B1D4E0] text-center">ghhj</div>
+<div className=" w-2/5 items-center text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4  rounded-md flex flex-col gap-2  bg-[#B1D4E0] text-center">ghhj</div>
 </div>
 </div>
 
