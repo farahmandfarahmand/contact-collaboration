@@ -26,7 +26,7 @@ function ServicesUsList() {
                 طراحی ایده های شما
               </h2>
             </div>
-            <p className="text-white text-justify p-2 text-sm sm:text-md sm:ml-5 md:ml-8 ">
+            <p className="text-white text-justify p-2 text-sm sm:text-md sm:ml-5 sm:mr-5 md:ml-8 ">
               گروه مهندسی ای کد، دیدگاه شما را با خلاقیت و تخصص فنی، به واقعیت
               تبدیل می کند.
             </p>

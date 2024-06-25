@@ -62,7 +62,7 @@ const dataDigitalApproch = [
 function DigitalMarketing() {
 
   return (
-    <div id="digitalItem" className=" mb-20 items-center">
+    <div id="digitalItem" className="bg-yellow-100 mb-20  items-center">
       <div className="rounded-2xl  bg-[url('/public/images/digital5.png')]  max-w-full overflow-y-scroll bg-content bg-fixed bg-center bg-no-repeat shadow-lg">
         <div className="right-[10%] md:mr-16 ">
           <h1
@@ -114,9 +114,9 @@ function DigitalMarketing() {
         </div>
       </div>
 
-      <div className=" mt-20 w-full h-full pb-3">
-        <div className="flex">
-          <div className="mr-[3%] md:flex md:gap-4">
+      <div className=" mt-20  pb-3">
+      
+          <div className=" w-full  jus mr-[3%] md:flex md:gap-4">
             <div className=" md:items-center text-gray-500  md:w-[40%] p-4 flex flex-col gap-2 md:justify-center">
               <h3 className="sm:text-[1rem] font-bold ">
                 انواع روش‌های تبلیغاتی
@@ -131,15 +131,26 @@ function DigitalMarketing() {
                 باید بدانید که از کدام کانال بازاریابی دیجیتال استفاده کنید.
               </p>
             </div>
+<div className="bg-pink-100  flex flex-col  gap-10 items-center  ">
+<div className="bg-green-300 w-full  sm:flex sm:flex-wrap sm:gap-4 ">
+<div className=" w-2/5  items-center text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4  rounded-md  bg-[#B1D4E0] text-center">ghhj</div>
+<div className=" w-2/5 items-center text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4   rounded-md  bg-[#B1D4E0] text-center">ghhj</div>
+<div className=" w-2/5 items-center text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4  rounded-md  bg-[#B1D4E0] text-center">ghhj</div>
+<div className=" w-2/5 items-center text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4  rounded-md  bg-[#B1D4E0] text-center">ghhj</div>
+<div className=" w-2/5 items-center text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4  rounded-md  bg-[#B1D4E0] text-center">ghhj</div>
+<div className=" w-2/5 items-center text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4  rounded-md  bg-[#B1D4E0] text-center">ghhj</div>
+</div>
+</div>
 
-            <div className="  sm:flex sm:flex-wrap sm:justify-center items-center md:w-[60%] gap-4  md:grid md:grid-cols-3  md:grid-rows-2  ">
+
+            {/* <div className="bg-pink-100 flex flex-col sm:items-start sm:flex  sm:flex-wrap sm:justify-center items-center md:w-[60%] gap-4  md:grid md:grid-cols-5  md:grid-rows-2  ">
               {dataDigitalApproch.map((item) =>
                 item.id == 2 || item.id == 5 ? (
                   <div
                     key={item.id}
                     className=" md:w-40 md:h-40  md:mr-[15%] sm:w-1/5  w-2/5 items-center text-gray-500  hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4 flex flex-col gap-x-2 rounded-md  bg-[#B1D4E0] text-center "
                   >
-                    <div className="  w-10 h-8 mt-3 ">{item.icon}</div>
+                    <div className="  w-10 h-8 mt-5 ">{item.icon}</div>
                     <div className=" w-32 h-6 text-[0.85rem] font-semibold ">
                       {item.title}
                     </div>
@@ -152,7 +163,7 @@ function DigitalMarketing() {
                     key={item.id}
                     className="md:w-40 md:h-40 md:-mt-8 md:gap-x-2 md:mr-[15%]  w-2/5 items-center text-gray-500 hover:text-white hover:scale-125 hover:bg-[#2E8BC0]  hover:translate-4 flex flex-col gap-x-2 rounded-md  bg-[#B1D4E0] text-center "
                   >
-                    <div className="  w-10 h-8 mt-3 ">{item.icon}</div>
+                    <div className="  w-10 h-8 mt-5 ">{item.icon}</div>
                     <div className=" w-32 h-6 text-[0.85rem] font-semibold  ">
                       {item.title}
                     </div>
@@ -162,9 +173,9 @@ function DigitalMarketing() {
                   </div>
                 )
               )}
-            </div>
+            </div> */}
           </div>
-        </div>
+       
       </div>
     </div>
   );

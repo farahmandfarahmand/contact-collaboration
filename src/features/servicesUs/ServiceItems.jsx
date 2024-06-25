@@ -54,7 +54,7 @@ function ServiceItems() {
   return (
     <div className="col-span-3 mb-20">
       <div className="gap-y-3">
-        <h1 className="col-span-2 p-2 text-[1.2rem] font-bold">
+        <h1 className="col-span-2 p-2 text-[#145DA0] text-[1.2rem] font-bold">
           طراحی سایت با ای کد سایت
         </h1>
         <p className="col-span-3 p-4 text-justify text-gray-600 mb-4 ">
