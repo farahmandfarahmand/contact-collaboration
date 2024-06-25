@@ -65,35 +65,43 @@ function SeoSite() {
   return (
     <section
       id="seoItem "
-      className="sm:bg-white sm:w-[90%]  items-center  mt-20 gap-4  md:relative
+      className="sm:bg-white  sm:w-[95%]  items-center  mt-20 gap-4  md:relative
        rounded-xl  mb-20  flex flex-col  md:grid   md:grid-cols-3 md:gap-x-10"
     >
-      <div className=" md:block md:col-span-3 flex flex-col items-center ">
+      <div className="sm:bg-[#b6d6e09c] rounded-r-lg p-2 md:block md:col-span-3 flex flex-col items-center ">
         <div
           data-aos="fade-right"
           data-aos-delay="200"
           data-aos-mirror="true"
           data-aos-once="false"
           data-aos-duration="1000"
-          className=" bg-red-100 w-[20rem] h-[19rem] flex  md:absolute bottom-0  top-0 -left-20 "
+          className="  w-[20rem] h-[19rem] flex  md:absolute bottom-0  top-0 -left-20 "
         >
-          <div
+          {/* <div
             className="animationImg z-0 w-[16rem] h-[13rem] rotate-0 hover:rotate-2
            duration-500 hover:-translate-z-1 -mr-52   mt-8   translate-x-16
-             aspect-w-2 aspect-h-1 order-2   "
+             aspect-w-2 aspect-h-1 order-2  [clip-path:polygon(20%_0%,_97%_0%,_83%_100%,_0%_100%)] "
           >
-            {/* [clip-path:polygon(20%_0%,_97%_0%,_83%_100%,_0%_100%)] */}
+         
             <img
               className=" object-cover  "
               src="/public/images/seo1.png"
               alt=""
             />
-          </div>
-          <div className="w-full h-full z-0 bg-[#274472]  transition-all duration-500 [clip-path:polygon(0%_0%,_75%_0%,_100%_40%,_59%_100%,_0%_100%)] "></div>
+          </div> */}
+          <div className="w-full h-full aspect-1 z-0 bg-[#274472]  transition-all duration-500 [clip-path:polygon(0%_0%,_75%_0%,_100%_40%,_59%_100%,_0%_100%)] ">
+          
+            <img
+              className="mt-5 object-cover  "
+              src="/public/images/seo4.png"
+              alt="Seo"
+            />
+            </div>
+        
           {/*  [clip-path:polygon(20%_0%,_97%_0%,_80%_100%,_0%_100%)] */}
         </div>
 
-        <div className=" rounded-lg md:w-[55%] md:col-span-2">
+        <div className="  rounded-lg md:w-[55%] md:col-span-2">
           <h1
             data-aos="fade-left"
             data-aos-offset="200"
@@ -105,7 +113,7 @@ function SeoSite() {
           >
             سئو سایت
           </h1>
-          <p className="text-md p-2 text-justify indent-4 w-full ">
+          <p className="text-md p-2 text-justify  w-full ">
             سئو مخفف Search Engine Optimization به معنی بهینه سازی وب سایت برای
             موتورهای جستجو می‌باشد. مجموعه‌ای از فعالیت‌هایی است که در طراحی و
             کدنویسی سایت، تدوین استراتژی محتوایی، تولید محتوا و لینک‌سازی خارجی

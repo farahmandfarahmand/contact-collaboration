@@ -5,7 +5,6 @@ import { PiVideoLight } from "react-icons/pi";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { TbNetwork } from "react-icons/tb";
 
-
 const dataDigitalApproch = [
   {
     id: "1",
@@ -60,9 +59,8 @@ const dataDigitalApproch = [
 ];
 
 function DigitalMarketing() {
-
   return (
-    <div id="digitalItem" className="bg-yellow-100 mb-20  items-center">
+    <div id="digitalItem" className=" mb-20  items-center">
       <div className="rounded-2xl  bg-[url('/public/images/digital5.png')]  max-w-full overflow-y-scroll bg-content bg-fixed bg-center bg-no-repeat shadow-lg">
         <div className="right-[10%] md:mr-16 ">
           <h1
@@ -101,8 +99,8 @@ function DigitalMarketing() {
               سال‌های قبل تبلیغات شامل آگهی‌ها، تلویزیون، رادیویی، چاپی،
               روزنامه، روی بیلبورد، داخل بروشور و ... بود. هزینه‌های تبلیغاتی
               بسیار گران و گزاف بودند و از آنجاییکه نمی‌توان جامعه خاصی را هدف
-              قرار داد و گاهی این هزینه‌ها هدر می‌رفتند. اندازه‌گیری نتایج در این
-              نوع بازاریابی بسیار سخت و دشوار است.
+              قرار داد و گاهی این هزینه‌ها هدر می‌رفتند. اندازه‌گیری نتایج در
+              این نوع بازاریابی بسیار سخت و دشوار است.
             </p>
             <p className="mt-4 leading-7 text-white">
               اما امروزه دیجیتال مارکتینگ یک ابزار قدرتمند، سریع و به نسبت سایر
@@ -115,94 +113,59 @@ function DigitalMarketing() {
       </div>
 
       <div className=" mt-20  pb-3">
-      
-          <div className=" w-full  jus mr-[3%] md:flex md:gap-4">
-            <div className=" md:items-center text-gray-500  md:w-[40%] p-4 flex flex-col gap-2 md:justify-center">
-              <h3 className="sm:text-[1rem] font-bold ">
-                انواع روش‌های تبلیغاتی
-              </h3>
+        <div className=" w-full  jus mr-[3%] md:flex md:gap-4">
+          <div className=" md:items-center text-gray-500 lg:w-[50%] md:w-[52%] p-4 flex flex-col gap-2 md:justify-center">
+            <h3 className="sm:text-[1rem] font-bold ">
+              انواع روش‌های تبلیغاتی
+            </h3>
 
-              <p className="text-justify leading-7 text-[0.85rem] sm:text-[0.85rem]">
-                انواع مختلفی از کانال‌های دیجیتال مارکتینگ وجود دارد. این
-                کانال‌ها پلتفرم‌هایی هستند که می‌توانید از آن‌ها برای دستیابی به
-                مخاطبان هدفی که متناسب با برند، محصول یا خدماتتان هستند، استفاده
-                کنید و به اهداف بازاریابی خود نزدیک شوید. به خاطر داشته باشید که
-                هیچکدام ذاتاً بهتر از دیگری نیست؛ بسته به شرایط و نیازهایتان
-                باید بدانید که از کدام کانال بازاریابی دیجیتال استفاده کنید.
-              </p>
-            </div>
-<div className="bg-pink-100 w-full flex flex-col  gap-y-20 items-center  ">
-<div className="bg-green-300  sm:flex sm:flex-wrap sm:gap-4 ">
-
-{/* {dataDigitalApproch.map((item) =>
-                item.id == 2 || item.id == 5 ? (
-                  <div key={item.id} className=" w-2/5  items-center text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4  rounded-md flex flex-col gap-2   bg-[#B1D4E0] text-center">
-                    <div className="  w-10 h-8 mt-5 ">{item.icon}</div>
-                    <div className=" w-32 h-6 text-[0.85rem] font-semibold ">
-                      {item.title}
-                    </div>
-                    <div className="text-[0.65rem] w-full p-2">
-                      {item.description}
-                    </div>
-                  </div>
-                ) : (
-                  <div
-                    key={item.id}
-                    className=" w-2/5 items-center text-gray-500 hover:text-white hover:scale-125 hover:bg-[#2E8BC0]  hover:translate-4 flex flex-col gap-2 rounded-md  bg-[#B1D4E0] text-center "
-                  >
-                    <div className="  w-10 h-8 mt-5 ">{item.icon}</div>
-                    <div className=" w-32 h-6 text-[0.85rem] font-semibold  ">
-                      {item.title}
-                    </div>
-                    <div className="text-[0.65rem]   w-full p-2">
-                      {item.description}
-                    </div>
-                  </div>
-                )
-              )} */}
-
-<div className=" w-2/5 items-center text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4   rounded-md flex flex-col gap-2  bg-[#B1D4E0] text-center">ghhj</div>
-<div className=" w-2/5 items-center text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4  rounded-md flex flex-col gap-2  bg-[#B1D4E0] text-center">ghhj</div>
-<div className=" w-2/5 items-center text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4  rounded-md flex flex-col gap-2  bg-[#B1D4E0] text-center">ghhj</div>
-<div className=" w-2/5 items-center text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4  rounded-md flex flex-col gap-2  bg-[#B1D4E0] text-center">ghhj</div>
-<div className=" w-2/5 items-center text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4  rounded-md flex flex-col gap-2  bg-[#B1D4E0] text-center">ghhj</div>
-</div>
-</div>
-
-
-            {/* <div className="bg-pink-100 flex flex-col sm:items-start sm:flex  sm:flex-wrap sm:justify-center items-center md:w-[60%] gap-4  md:grid md:grid-cols-5  md:grid-rows-2  ">
+            <p className="text-justify leading-7 text-[0.85rem] sm:text-[0.85rem]">
+              انواع مختلفی از کانال‌های دیجیتال مارکتینگ وجود دارد. این کانال‌ها
+              پلتفرم‌هایی هستند که می‌توانید از آن‌ها برای دستیابی به مخاطبان
+              هدفی که متناسب با برند، محصول یا خدماتتان هستند، استفاده کنید و به
+              اهداف بازاریابی خود نزدیک شوید. به خاطر داشته باشید که هیچکدام
+              ذاتاً بهتر از دیگری نیست؛ بسته به شرایط و نیازهایتان باید بدانید
+              که از کدام کانال بازاریابی دیجیتال استفاده کنید.
+            </p>
+          </div>
+          <div className="  flex flex-col  items-center   ">
+            <div className=" sm:flex sm:flex-wrap gap-4 ">
               {dataDigitalApproch.map((item) =>
                 item.id == 2 || item.id == 5 ? (
                   <div
                     key={item.id}
-                    className=" md:w-40 md:h-40  md:mr-[15%] sm:w-1/5  w-2/5 items-center text-gray-500  hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4 flex flex-col gap-x-2 rounded-md  bg-[#B1D4E0] text-center "
+                    className="md:w-40 md:h-40 sm:w-1/5 items-center mb-5 text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4   rounded-md flex flex-col gap-2  bg-[#B1D4E0] text-center"
                   >
-                    <div className="  w-10 h-8 mt-5 ">{item.icon}</div>
-                    <div className=" w-32 h-6 text-[0.85rem] font-semibold ">
-                      {item.title}
-                    </div>
-                    <div className="text-[0.65rem] w-full p-2">
-                      {item.description}
+                    <div className=" flex flex-col items-center w-32">
+                      <div className="w-10 h-8 mt-5">{item.icon}</div>
+                      <div className="text-[0.85rem] font-semibold ">
+                        {item.title}
+                      </div>
+                      <div className="text-[0.65rem] p-2">
+                        {item.description}
+                      </div>
                     </div>
                   </div>
                 ) : (
                   <div
                     key={item.id}
-                    className="md:w-40 md:h-40 md:-mt-8 md:gap-x-2 md:mr-[15%]  w-2/5 items-center text-gray-500 hover:text-white hover:scale-125 hover:bg-[#2E8BC0]  hover:translate-4 flex flex-col gap-x-2 rounded-md  bg-[#B1D4E0] text-center "
+                    className="md:-mt-8 md:gap-x-2 md:w-40   items-center mb-5 text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4   rounded-md flex flex-col gap-2  bg-[#B1D4E0] text-center"
                   >
-                    <div className="  w-10 h-8 mt-5 ">{item.icon}</div>
-                    <div className=" w-32 h-6 text-[0.85rem] font-semibold  ">
-                      {item.title}
-                    </div>
-                    <div className="text-[0.65rem]   w-full p-2">
-                      {item.description}
+                    <div className=" flex flex-col items-center w-32">
+                      <div className="w-10 h-8 mt-5">{item.icon}</div>
+                      <div className="text-[0.85rem] font-semibold ">
+                        {item.title}
+                      </div>
+                      <div className="text-[0.65rem] p-2">
+                        {item.description}
+                      </div>
                     </div>
                   </div>
                 )
               )}
-            </div> */}
+            </div>
           </div>
-       
+        </div>
       </div>
     </div>
   );

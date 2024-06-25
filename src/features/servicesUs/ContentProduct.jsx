@@ -22,7 +22,7 @@ function ContentProduct() {
         <img
         style={{transform:ctr}}
           className="inline-block aspect-w-2 aspect-h-0 object-cover "
-          src="/images/content8.png"
+          src="/public/images/content8.png"
           alt="laptop"
         />
       </div>
