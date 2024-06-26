@@ -6,7 +6,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 // import Captcha from "../captcha/Captcha";
 import InfoUs from "./InfoUs";
-import { useEffect, useState } from "react";
+import { useEffect,  useState } from "react";
 import axios from "axios";
 import ExtraTextFiled from "../../ui/ExtraTextFiled";
 
@@ -109,10 +109,19 @@ function ContactInfo() {
       .catch((err) => console.log(err));
   }, []);
 
+  // const refValue = useRef();
+  // const [emptyInput, setEmptyInput] = useState(false);
+  // useEffect(() => {
+  //   if(emptyInput){
+  //     console.log('empty filed');
+  //     refValue.current.focus();
+  //   }
+  // }, [emptyInput]);
+
   return (
     <div className=" sm:flex sm:max-w-screen-xl sm:h-full m-2 rounded-sm  bg-[#f6f6f6] ">
       <InfoUs />
-      <div className=" shadow-2xl bg-white sm:w-[70%] sm:max-h-full  m-3 md:max-w-screen-lg rounded-lg relative ">
+      <div className=" shadow-2xl bg-white lg:w-[80%] sm:max-h-full  m-3 md:max-w-screen-lg rounded-lg relative ">
         <div className="bg-primary-100 py-2.5 p-2 rounded-sm mb-5 ">
           <span className="flex  gap-x-2 items-center  relative">
             <div className="bg-primary-800 mt-1 mb-1 w-14 h-14 absolute rounded-sm ">
@@ -126,16 +135,22 @@ function ContactInfo() {
             </h3>
           </span>
         </div>
-        <div className=" flex flex-col sm:gap-y-1   sm:max-h-full  ">
+        <div className=" flex flex-col lg:gap-y-1   lg:max-h-full  ">
           <form
-            className="  sm:content-center  "
+            className="  lg:content-center  "
             onSubmit={formik.handleSubmit}
           >
-            <div className="sm:grid sm:grid-cols-2 sm:h-full  sm:gap-1 p-2">
+            <div className=" lg:grid lg:grid-cols-2 lg:h-full  lg:gap-1 p-2">
               {/* <p className="sm:col-span-2 text-sm sm:text-md">میتوانید مشاوره رایگان تلفنی دریافت کنید.</p> */}
-              <p className="sm:col-span-2 text-sm sm:text-md">     هم اکنون درخواست مشاوره دهید تا کارشناسان ما با شما تماس بگیرند.</p>
+              <p className=" lg:col-span-2  text-sm lg:text-md">
+                {" "}
+                هم اکنون درخواست مشاوره دهید تا کارشناسان ما با شما تماس بگیرند.
+              </p>
               {/*------ --------------Information Of Form----------- */}
+              
               <TextFiled
+             
+                // refValue={refValue}
                 label="نام"
                 placeholder=" نام "
                 name="name"
@@ -147,6 +162,7 @@ function ContactInfo() {
               />
 
               <TextFiled
+              // refValue={refValue}
                 label="نام خانوادگی"
                 placeholder="  نام خانوادگی"
                 name="family"
@@ -156,6 +172,7 @@ function ContactInfo() {
               />
 
               <TextFiled
+           
                 label="شماره تماس "
                 placeholder=" 09xxxxxxxxx  "
                 name="phoneNumber"
@@ -165,6 +182,7 @@ function ContactInfo() {
               />
 
               <TextFiled
+          
                 label="ایمیل"
                 placeholder=" your@gmail.com "
                 type="email"
@@ -175,6 +193,7 @@ function ContactInfo() {
               {/* ---------------------Message Data-------------------- */}
 
               <ExtraTextFiled
+              
                 formik={formik}
                 placeholder="   متن درخواست شما ..."
                 label=" درخواست "

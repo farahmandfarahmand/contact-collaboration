@@ -14,11 +14,11 @@ function InfoUs() {
       <img src="/images/4861725-1.svg" alt="" />
       <h3 className="p-2 text-center font-bold">اطلاعات تماس با ای کد</h3>
       <span className="p-2 text-sm">
-        کارشناسان فنی گروه ای کد، آماده پاسخگویی به سوالات کاربران گرامی
-        میباشند.
+        کارشناسان فنی گروه ای کد، آماده پاسخگویی به سوالات شما کاربران گرامی
+        می‌باشند.
       </span>
       <span className=" p-2 text-sm">
-        برای دریافت استعلام قیمت خدمات گروه ای کد، میتوانید از طریق راه های
+        برای دریافت استعلام قیمت خدمات   می‌توانید از طریق راه‌های
         ارتباطی ذکر شده با کارشناسان ما تماس حاصل فرمائید.
       </span>
       <span className="flex p-2 gap-x-1 justify-around cursor-pointer items-center">
@@ -40,20 +40,22 @@ function InfoUs() {
       </span>
       <span className="flex p-2 pt-6 gap-x-4 mb-2 justify-center items-center">
         {/* <ImFacebook2 className=" w-5 h-5" /> */}
-        <a href="https://api.whatsapp.com/send/?phone=989380535845&text&type=phone_number&app_absent=0">
-          <IoLogoWhatsapp className=" w-5 h-5 cursor-pointer " />
+        <a 
+        
+        href="https://api.whatsapp.com/send/?phone=989380535845&text&type=phone_number&app_absent=0">
+          <IoLogoWhatsapp className="hover:animate-bounce w-6 h-6 cursor-pointer " />
         </a>
         <a href="https://t.me/telegram">
           <FaTelegram
-            className=" w-5 h-5 cursor-pointer"
+            className="hover:animate-bounce w-5 h-5 cursor-pointer"
             style={{ fill: "#e31963" }}
           />
         </a>
         <a href="https://github.com/login">
-          <FaGithub className=" w-5 h-5 cursor-pointer" />
+          <FaGithub className="hover:animate-bounce w-5 h-5 cursor-pointer" />
         </a>
         <a href="https://www.linkedin.com/login">
-          <FaLinkedin className=" w-5 h-5 cursor-pointer" />
+          <FaLinkedin className="hover:animate-bounce w-5 h-5 cursor-pointer" />
         </a>
       </span>
     </div>
