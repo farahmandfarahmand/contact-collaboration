@@ -4,17 +4,17 @@ import LabelFiled from "./LabelFiled";
 
 function RadioInput({ name, formik, radioOptions, label }) {
   return (
-    <div className="sm:col-span-2 sm:mr-2">
+    <div className="sm:col-span-2 sm:mr-2 ">
       {/* ---------label section------------- */}
       <div className=" w-full  justify-between    ">
         <LabelFiled formik={formik} name={name} label={label} />
 
         {/* -----------input section------------ */}
-        <div className="text-secondary-600 flex gap-x-2 items-center ">
+        <div className="text-secondary-600 flex gap-x-2  items-center ">
           {radioOptions.map((item) => (
             <React.Fragment key={item.value}>
               <input
-              className="form-radio gap-x-1 w-4 h-4 cursor-pointer focus:ring-primary-400"
+              className="form-radio gap-x-1 w-4 h-4  cursor-pointer focus:ring-primary-400"
                 type="radio"
                 id={item.value}
                 name={name}

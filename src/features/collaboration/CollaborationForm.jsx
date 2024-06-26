@@ -124,7 +124,7 @@ function CollaborationForm() {
       </section>
       <form
         onSubmit={formik.handleSubmit}
-        className="bg-white h-[700px] sm:h-[670px] top-28  w-full rounded-t-3xl  sm:top-32 z-10  absolute  bottom-0 left-0 p-2 "
+        className="bg-white h-[730px] sm:h-[730px]  top-28  w-full rounded-t-3xl  sm:top-32 z-10  absolute  bottom-0 left-0 p-2 "
       >
         {/* -----------stepper for desktop----------- */}
         <DesktopStepper
@@ -135,8 +135,8 @@ function CollaborationForm() {
 
         {/* -----------stepper for mobile----------- */}
 
-        <div className="w-full absolute bottom-0 left-0 mt-5 sm:hidden max-w-2xl mx-auto bg-indigo-100 border-2 border-primary-700 rounded-md">
-          <div className="flex  items-center justify-between gap-3 p-3 bg-white rounded">
+        <div className="w-full  absolute bottom-0 left-0 mt-20 sm:hidden max-w-2xl mx-auto bg-indigo-100 border-2 border-primary-700 rounded-md">
+          <div className="flex   items-center justify-between gap-3 p-3 bg-white rounded">
             <button
               onClick={goToNextStep}
               className={`${
@@ -168,7 +168,7 @@ function CollaborationForm() {
         </div>
 
         {/*  ------buttons of step for Descktop stepper---------- */}
-        <div className="flex w-full justify-evenly absolute bottom-0 mb-12  gap-4 ">
+        <div className="flex w-full justify-evenly  absolute bottom-0 mb-12  gap-4 ">
           {currentStep <= NUMBER_OF_STEPS - 2 ? (
             <button
               // disabled={!formik.isValid}
