@@ -134,7 +134,7 @@ function DigitalMarketing() {
                 item.id == 2 || item.id == 5 ? (
                   <div
                     key={item.id}
-                    className="md:w-40 md:h-40 sm:w-1/5 items-center mb-5 text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4   rounded-md flex flex-col gap-2  bg-[#B1D4E0] text-center"
+                    className="md:w-40 md:h-40 sm:w-1/5 lg:w-52  items-center mb-5 text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4   rounded-md flex flex-col gap-2  bg-[#B1D4E0] text-center"
                   >
                     <div className=" flex flex-col items-center w-32">
                       <div className="w-10 h-8 mt-5">{item.icon}</div>
@@ -149,7 +149,7 @@ function DigitalMarketing() {
                 ) : (
                   <div
                     key={item.id}
-                    className="md:-mt-8 md:gap-x-2 md:w-40   items-center mb-5 text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4   rounded-md flex flex-col gap-2  bg-[#B1D4E0] text-center"
+                    className="md:-mt-8 md:gap-x-2 md:w-40 lg:w-52  items-center mb-5 text-gray-500 hover:scale-125 hover:bg-[#2E8BC0] hover:text-white hover:translate-4   rounded-md flex flex-col gap-2  bg-[#B1D4E0] text-center"
                   >
                     <div className=" flex flex-col items-center w-32">
                       <div className="w-10 h-8 mt-5">{item.icon}</div>

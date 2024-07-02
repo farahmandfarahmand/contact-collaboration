@@ -48,14 +48,14 @@ function DomainHost() {
           </ol>
         </div>
         {/* ----------------host section--------------------- */}
-        <div className="bg-[#B1D4E0]  opacity-75 sm:absolute sm:top-[8.5rem]  sm:h-[18rem] md:right-[23rem] sm:right-[19rem] sm:z-30 lg:w-[31rem] lg:right-[31rem]">
+        <div className="bg-[#B1D4E0]  opacity-75 sm:absolute sm:top-[8.5rem]  sm:h-[18rem] md:right-[23rem] sm:right-[19rem] sm:z-30 lg:w-[31rem] lg:right-[31rem] xl:right-[39rem]">
           <div className="hidden w-full md:w-[20rem] aspect-w-2 aspect-h-1 sm:block bg-no-repeat bg-cover bg-[url('/public/images/domain2-removebg.png')] h-full   opacity-15 -z-10 left-0 bottom-0 absolute"></div>
           <h2 className=" text-[1.2rem] pr-4 pt-2 font-bold  ">هاست</h2>
           <p className="p-4 text-[0.8rem] ">
             برای داشتن یک وب سایت روی بستر اینترنت بعد از ثبت دامنه باید سراغ
-            تهیه هاست بروید. برای این منظور شما می توانید از شرکت های ارایه
+            تهیه هاست بروید. برای این منظور شما می‌توانید از شرکت های ارایه
             دهنده خدمات هاستینگ، هاست مناسب خود را تهیه نمایید. این شرکت ها
-            سرورهایی برای اینگونه خدمات ارائه می‌دهند هاست ها می توانند بر روی
+            سرورهایی برای اینگونه خدمات ارائه می‌دهند هاست ها می‌توانند بر روی
             این سرورها قرار بگیرند.
           </p>
           <p className="mb-2 text-[0.8rem] pr-4">

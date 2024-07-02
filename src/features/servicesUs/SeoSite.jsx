@@ -64,7 +64,7 @@ const dataSeoItem = [
 function SeoSite() {
   return (
     <section
-      id="seoItem "
+      id="seoItem"
       className="sm:bg-white  sm:w-[95%]  items-center  mt-20 gap-4  md:relative
        rounded-xl  mb-20  flex flex-col  md:grid   md:grid-cols-3 md:gap-x-10"
     >
@@ -89,10 +89,15 @@ function SeoSite() {
               alt=""
             />
           </div> */}
-          <div className="w-full h-full aspect-1 z-0 bg-[#274472]  transition-all duration-500 [clip-path:polygon(0%_0%,_75%_0%,_100%_40%,_59%_100%,_0%_100%)] ">
+          <div className="w-full h-full aspect-1 z-0 bg-[#274472]  
+          transition-all duration-700 ease-linear
+          [clip-path:polygon(0%_0%,_75%_0%,_100%_50%,_75%_100%,_0%_100%)] 
+          md:[clip-path:polygon(0%_0%,_75%_0%,_100%_40%,_59%_100%,_0%_100%)] 
+
+          rotate-90 md:rotate-0 ">
           
             <img
-              className="mt-5 object-cover  "
+              className="-mt-5 object-cover -rotate-90 md:rotate-0 md:mt-5 "
               src="/public/images/seo4.png"
               alt="Seo"
             />

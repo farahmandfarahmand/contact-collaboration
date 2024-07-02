@@ -13,7 +13,7 @@ const dataServiceItem = [
     title: "   سئو سایت  ",
 
     icon: <RiSeoLine color="#E87A00" className=" w-12 h-12" />,
-    toScrollLink: "seoItem",
+    toScrollLink:"seoItem",
     // dataAnchor:"top-center"
   },
   {

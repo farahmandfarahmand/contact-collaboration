@@ -19,11 +19,11 @@ function BackToTopButton() {
     });
   };
   return (
-    <div className=" fixed p-4 bottom-0 right-0">
+    <div className=" fixed z-99 p-4 bottom-[20px] right-[20px]">
       {backToTopButton && (
         <button
           onClick={scrollUp}
-          className="flex items-center justify-center shadow-xl rounded-full  bg-[#145DA0] font-bold w-[45px] h-[45px]"
+          className="flex items-center justify-center cursor-pointer shadow-xl rounded-full hover:bg-[#808d99]  bg-[#145DA0] font-bold w-[45px] h-[45px]"
         >
           <FaArrowUp className="w-6 h-6" color="white" />
         </button>

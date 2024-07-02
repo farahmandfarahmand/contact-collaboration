@@ -43,7 +43,7 @@ function StepsDesign() {
           مراحل طراحی سایت
         </h1>
         <p className="text-[1rem] text-center text-gray-500">
-          طراحی وب سایت شما را د 4 مرحله انجام خواهیم داد
+          طراحی وب سایت شما را در 4 مرحله انجام خواهیم داد
         </p>
       </div>
       <div className=" flex   flex-wrap justify-center  items-center  sm:justify-around   ">
